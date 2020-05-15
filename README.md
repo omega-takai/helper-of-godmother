@@ -1,6 +1,6 @@
 # Helper of Godmother
 
-![GitHub Pages Deployment - Nuxt.js](https://github.com/t--takai/helper-of-godmother/workflows/GitHub%20Pages%20Deployment%20-%20Nuxt.js/badge.svg)
+![DEPLOYMENT](https://github.com/t--takai/helper-of-godmother/workflows/DEPLOYMENT/badge.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/helper-of-godmother/blob/master/LICENSE)
 
 > To Make Vue Components
