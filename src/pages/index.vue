@@ -13,7 +13,7 @@
         )
         BaseTypography(
           :level="1"
-          text="NuxtBoilerplate"
+          text="Helper of Godmother"
           key="title"
         )
 </template>

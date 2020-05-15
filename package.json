@@ -1,5 +1,5 @@
 {
-  "name": "vue-boilerplate",
+  "name": "helper-of-godmother",
   "version": "1.1.0",
   "description": "To Make Vue Components",
   "author": "Tomonari Takai",
@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "generate:gh-pages": "cross-env BASE_DIR=/NuxtBoilerplate/ nuxt generate",
+    "generate:gh-pages": "cross-env BASE_DIR=/helper-of-godmother/ nuxt generate",
     "lint": "yarn lint:script && yarn lint:style",
     "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
     "lint:script": "eslint --ext .js,.vue .",

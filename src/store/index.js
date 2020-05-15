@@ -1,5 +1,5 @@
 export const state = () => ({
-  repositoryUrl: 'https://github.com/t--takai/NuxtBoilerplate',
+  repositoryUrl: 'https://github.com/t--takai/helper-of-godmother',
   author: {
     name: 'Tomonari Takai',
     position: 'UI Designer / Front-end Engineer',
