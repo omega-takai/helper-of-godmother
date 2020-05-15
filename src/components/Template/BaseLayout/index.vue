@@ -5,7 +5,6 @@
 
     main(:class="$style.main")
       slot
-      BindNavigation(:class="$style.nav")
 
     TheBindFooter(:class="$style.footer")
 </template>

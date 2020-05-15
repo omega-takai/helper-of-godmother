@@ -7,13 +7,16 @@
         appear
         tag="div"
       )
-        TheNuxtLogo(
-          key="logo"
-          :class="$style.logo"
-        )
-        BaseTypography(
-          :level="1"
-          text="Helper of Godmother"
+        div(
           key="title"
+          :class="$style.title"
         )
+          BaseTypography(
+            :level="1"
+            text="命名の助人"
+          )
+          BaseTypography(
+            :level="4"
+            text="Helper of Godmother"
+          )
 </template>

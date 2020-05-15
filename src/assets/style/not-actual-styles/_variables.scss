@@ -67,11 +67,9 @@ $type-family: (
 }
 
 $type-scale: (
-  'extra': variables-pix-to-rem(177),
-  'h1': variables-pix-to-rem(110),
-  'h2': variables-pix-to-rem(68),
-  'h3': variables-pix-to-rem(42),
-  'h4': variables-pix-to-rem(26),
+  'h1': variables-pix-to-rem(68),
+  'h2': variables-pix-to-rem(42),
+  'h3': variables-pix-to-rem(26),
   'subtitle': variables-pix-to-rem(26),
   'body': variables-pix-to-rem(16),
   'caption': variables-pix-to-rem(10),
@@ -82,7 +80,6 @@ $type-weight: (
   'h1': 400,
   'h2': 400,
   'h3': 600,
-  'h4': 600,
   'subtitle': 600,
   'body': 400,
   'caption': 400,
