@@ -8,11 +8,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    min-height: 90vh;
     margin: 0 auto;
     padding: {
+      top: base.pix-to-rem(48);
       right: base.pix-to-rem(16);
-      bottom: 5vh;
+      bottom: base.pix-to-rem(48);
       left: base.pix-to-rem(16);
     }
   }

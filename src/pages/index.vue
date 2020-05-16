@@ -19,4 +19,9 @@
             :level="4"
             text="Helper of Godmother"
           )
+        img(
+          key="image"
+          src="~/assets/image/temp/button.png"
+          :class="$style.image"
+        )
 </template>
