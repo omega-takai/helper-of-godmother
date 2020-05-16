@@ -13,7 +13,7 @@
         )
           BaseTypography(
             :level="1"
-            text="命名の助人"
+            text="命名の助"
           )
           BaseTypography(
             :level="4"

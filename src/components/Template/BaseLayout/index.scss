@@ -15,11 +15,25 @@
       bottom: 5vh;
       left: base.pix-to-rem(16);
     }
+  }
 
-    .nav {
-      margin: {
-        top: base.pix-to-rem(16);
-      }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: base.pix-to-rem(48);
+    padding-top: base.pix-to-rem(8);
+    background-color: base.colors('whiteAlpha');
+    .logo {
+      display: inline-block;
+      width: base.pix-to-rem(40);
+      height: base.pix-to-rem(40);
+      margin-left: base.pix-to-rem(8);
+      font-size: base.type-scale('subtitle');
+      font-weight: base.type-weight('subtitle');
+      line-height: base.pix-to-rem(40);
+      text-align: center;
     }
   }
 

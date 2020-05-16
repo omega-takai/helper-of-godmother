@@ -6,5 +6,12 @@
     main(:class="$style.main")
       slot
 
+    header(:class="$style.header")
+      NuxtLink(
+        to="/"
+        v-text="'助'"
+        :class="$style.logo"
+      )
+
     TheBindFooter(:class="$style.footer")
 </template>

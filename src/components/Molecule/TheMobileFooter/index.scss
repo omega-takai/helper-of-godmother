@@ -1,5 +1,11 @@
 .footer {
-  padding: 3em 5em 1em;
+  padding: {
+    top: 3em;
+    right: base.pix-to-rem(24);
+    bottom: base.pix-to-rem(48);
+    left: base.pix-to-rem(24);
+  }
+
   font-size: base.type-scale('body');
   font-weight: base.type-weight('body');
   color: base.colors('white');
