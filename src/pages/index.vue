@@ -19,6 +19,31 @@
             :level="4"
             text="Helper of Godmother"
           )
+        section(
+          :class="$style.section"
+          key="one"
+        )
+          BaseTypography(
+            :level="3"
+            text="素材文字をえらぶ"
+          )
+        section(
+          :class="$style.section"
+          key="two"
+        )
+          BaseTypography(
+            :level="3"
+            text="名前の長さをえらぶ"
+          )
+        section(
+          :class="$style.section"
+          key="three"
+        )
+          BaseTypography(
+            :level="3"
+            text="名前の候補をつくる"
+          )
+
         img(
           key="image"
           src="~/assets/image/temp/button.png"

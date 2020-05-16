@@ -3,5 +3,13 @@
 }
 
 .image {
-  width: 100vw;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  padding: {
+    right: base.pix-to-rem(16);
+    left: base.pix-to-rem(16);
+  }
 }
