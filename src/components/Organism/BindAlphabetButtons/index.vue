@@ -4,7 +4,7 @@
   div
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in arrayHalfFirst"
+        v-for="(val, i) in alphabetJpHalfFirst"
         :key="i"
         :class="$style.li"
       )
@@ -14,7 +14,7 @@
         )
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in arrayHalfLast"
+        v-for="(val, i) in alphabetJpHalfLast"
         :key="i"
         :class="$style.li"
       )

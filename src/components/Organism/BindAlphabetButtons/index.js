@@ -1,8 +1,21 @@
-import { mapGetters } from 'vuex'
+// import { mapGetters } from 'vuex'
 
 export default {
   name: 'BindAlphabetButtons',
-  computed: {
-    ...mapGetters('alphabet', ['arrayHalfFirst', 'arrayHalfLast']),
+  data() {
+    return {
+      alphabetJpHalfFirst: 'あいうえおかきくけこさしすせそたちつてとなにぬねの'.split(
+        ''
+      ),
+      alphabetJpHalfLast: 'はひふへほまみむめもやゆよらりるれろわをん'.split(
+        ''
+      ),
+    }
   },
+  // computed: {
+  //   ...mapGetters('material', [
+  //     'alphabetJpArrayHalfFirst',
+  //     'alphabetJpArrayHalfLast',
+  //   ]),
+  // },
 }
