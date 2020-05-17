@@ -27,6 +27,7 @@
             :level="3"
             text="素材文字をえらぶ"
           )
+          BindAlphabetButtons
         section(
           :class="$style.section"
           key="two"
