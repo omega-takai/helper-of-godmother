@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-.image {
+.wrapper {
+  flex: 1 1 100%;
   width: 100%;
 }
 
@@ -11,8 +12,10 @@
   margin: {
     top: base.pix-to-rem(32);
   }
-  padding: {
-    right: base.pix-to-rem(16);
-    left: base.pix-to-rem(16);
+  .element {
+    padding: {
+      right: base.pix-to-rem(16);
+      left: base.pix-to-rem(16);
+    }
   }
 }

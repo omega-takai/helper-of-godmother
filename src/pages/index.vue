@@ -6,6 +6,7 @@
       transition-group(
         appear
         tag="div"
+        :class="$style.wrapper"
       )
         div(
           key="title"
@@ -26,8 +27,11 @@
           BaseTypography(
             :level="3"
             text="素材文字をえらぶ"
+            :class="$style.element"
           )
-          BindAlphabetButtons
+          BindAlphabetButtons(
+            :class="$style.element"
+          )
         section(
           :class="$style.section"
           key="two"
@@ -35,6 +39,7 @@
           BaseTypography(
             :level="3"
             text="名前の長さをえらぶ"
+            :class="$style.element"
           )
         section(
           :class="$style.section"
@@ -43,11 +48,6 @@
           BaseTypography(
             :level="3"
             text="名前の候補をつくる"
+            :class="$style.element"
           )
-
-        img(
-          key="image"
-          src="~/assets/image/temp/button.png"
-          :class="$style.image"
-        )
 </template>
