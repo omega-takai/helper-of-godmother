@@ -41,6 +41,9 @@
             text="名前の長さをえらぶ"
             :class="$style.element"
           )
+          BindLengthButtons(
+            :class="$style.element"
+          )
         section(
           :class="$style.section"
           key="three"
