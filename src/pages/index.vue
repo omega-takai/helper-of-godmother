@@ -53,4 +53,7 @@
             text="名前の候補をつくる"
             :class="$style.element"
           )
+          BindGenerateButton(
+            :class="$style.element"
+          )
 </template>

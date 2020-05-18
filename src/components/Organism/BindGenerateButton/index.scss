@@ -1,0 +1,38 @@
+.wrapper {
+  display: block;
+  margin-top: base.pix-to-rem(16);
+}
+
+.note {
+  margin-bottom: base.pix-to-rem(16);
+  .li {
+    font-size: base.type-scale('body');
+    line-height: base.fonts('lineHeight');
+  }
+}
+
+.button {
+  $space: 0.25em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: base.pix-to-rem(240);
+  height: base.pix-to-rem(56);
+  padding-left: $space;
+  margin: 0 auto;
+  font-size: base.type-scale('body');
+  font-weight: base.fonts('bold');
+  color: base.colors('white');
+  text-decoration: none;
+  letter-spacing: $space;
+  word-wrap: break-word;
+  background-color: base.colors('accentAlpha');
+  border-radius: base.pix-to-rem(8);
+
+  &:hover {
+    color: base.colors('accent');
+    background-color: none;
+    border: 1px solid base.colors('accent');
+  }
+}
