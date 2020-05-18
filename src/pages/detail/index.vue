@@ -19,12 +19,28 @@
         )
           BaseTypography(
             :level="3"
-            text="人名漢字を探す"
-            :class="$style.element"
+            text="人名漢字を探す（外部リンク）"
+            :class="[$style.element, $style.sectionTitle]"
           )
-          P(
-            :class="[$style.element, $style.text]"
-          ) 外部リンクを設置予定
+          ul(:class="$style.element")
+            li(:class="$style.li")
+              LinkButtonWithIcon(
+                iconName="ExternalLinkIcon"
+                text="あい"
+                :url="kanjiLink + 'あい'"
+              )
+            li(:class="$style.li")
+              LinkButtonWithIcon(
+                iconName="ExternalLinkIcon"
+                text="あ"
+                :url="kanjiLink + 'あ'"
+              )
+            li(:class="$style.li")
+              LinkButtonWithIcon(
+                iconName="ExternalLinkIcon"
+                text="い"
+                :url="kanjiLink + 'あ'"
+              )
         div(
           key="back"
           :class="$style.wrapperBackButton"

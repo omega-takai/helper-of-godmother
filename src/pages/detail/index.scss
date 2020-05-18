@@ -11,10 +11,13 @@
         right: base.pix-to-rem(24);
         left: base.pix-to-rem(24);
       }
+      .li {
+        margin-top: base.pix-to-rem(4);
+        font-size: base.type-scale('body');
+      }
     }
-    .text {
-      margin-top: base.pix-to-rem(16);
-      font-size: base.type-scale('body');
+    .sectionTitle {
+      margin-bottom: base.pix-to-rem(16);
     }
   }
 
