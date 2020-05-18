@@ -1,13 +1,17 @@
 .wrapper {
   display: block;
   margin-top: base.pix-to-rem(16);
-}
 
-.note {
-  margin-bottom: base.pix-to-rem(16);
-  .li {
-    font-size: base.type-scale('body');
-    line-height: base.fonts('lineHeight');
+  .generatedList {
+    $gap: base.pix-to-rem(4);
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$gap;
+    .li {
+      flex: 0 0 auto;
+      margin: $gap;
+    }
   }
 }
 
@@ -15,8 +19,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   height: base.pix-to-rem(40);
+  padding: 0 base.pix-to-rem(8);
   font-size: base.type-scale('body');
   color: base.colors('green');
   text-decoration: none;
