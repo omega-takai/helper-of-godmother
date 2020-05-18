@@ -33,6 +33,6 @@
 .h4 {
   @include typography;
 
-  font-size: base.type-scale('h4');
-  font-weight: base.type-weight('h4');
+  font-size: base.type-scale('subtitle');
+  font-weight: base.type-weight('subtitle');
 }

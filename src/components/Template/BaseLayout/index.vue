@@ -5,7 +5,13 @@
 
     main(:class="$style.main")
       slot
-      BindNavigation(:class="$style.nav")
+
+    header(:class="$style.header")
+      NuxtLink(
+        to="/"
+        v-text="'助'"
+        :class="$style.logo"
+      )
 
     TheBindFooter(:class="$style.footer")
 </template>

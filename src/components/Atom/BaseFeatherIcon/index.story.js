@@ -18,6 +18,8 @@ const icons = [
   'GithubIcon',
   'InstagramIcon',
   'TwitterIcon',
+  'SmileIcon',
+  'ExternalLinkIcon',
 ]
 
 storiesOf('Design System|Atom/BaseFeatherIcon', module)

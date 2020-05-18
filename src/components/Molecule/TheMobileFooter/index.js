@@ -1,9 +1,11 @@
 import LinkTextWithIcon from '@/components/Molecule/LinkTextWithIcon/index.vue'
+import NuxtLinkTextWithIcon from '@/components/Molecule/NuxtLinkTextWithIcon/index.vue'
 
 export default {
   name: 'TheMobileFooter',
   components: {
     LinkTextWithIcon,
+    NuxtLinkTextWithIcon,
   },
   props: {
     bindStatus: {

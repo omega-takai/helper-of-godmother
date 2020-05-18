@@ -1,5 +1,11 @@
 .footer {
-  padding: 3em 5em 1em;
+  padding: {
+    top: base.pix-to-rem(32);
+    right: base.pix-to-rem(24);
+    bottom: base.pix-to-rem(32);
+    left: base.pix-to-rem(24);
+  }
+
   font-size: base.type-scale('body');
   font-weight: base.type-weight('body');
   color: base.colors('white');
@@ -7,7 +13,10 @@
 }
 
 .copy {
-  padding: base.type-scale('body') 0;
+  padding: {
+    top: base.type-scale('body');
+  }
+
   margin-top: base.type-scale('body');
   font-size: base.type-scale('caption');
   font-weight: base.type-weight('caption');
@@ -23,10 +32,11 @@
   min-height: 2em;
 
   &:not(:first-of-type) {
-    margin-top: base.pix-to-rem(8);
+    margin-top: base.pix-to-rem(16);
   }
 
   > dt {
     flex: 1 1 100%;
+    margin-bottom: base.pix-to-rem(4);
   }
 }

@@ -28,6 +28,7 @@ $colors: (
   'green': rgba(#3b8070, 1),
   'background': rgba(whitesmoke, 1),
   'accent': rgba(blueviolet, 1),
+  'accentAlpha': rgba(blueviolet, 0.8),
   'inverted': rgba(#35495e, 1),
   'font': rgba(#333, 1),
   'fontSub': rgba(#333, 0.6),
@@ -36,11 +37,12 @@ $colors: (
 // fonts ====================================
 // 2020年に最適なfont-familyの書き方 - ICS MEDIA
 // SEE: https://ics.media/entry/200317/
+// 文字詰めできるCSSのfont-feature-settingsが凄い！ 日本語フォントこそ指定したい自動カーニング - ICS MEDIA
+// SEE: https://ics.media/entry/14087/
 $fonts: (
   'color': #{map.get($colors, 'font')},
   'normal': 400,
-  'bold': 600,
-  'extraBold': 900,
+  'bold': 700,
   'kerning': 'palt',
   'space': 0.1em,
   'lineHeight': 1.5,
@@ -67,23 +69,21 @@ $type-family: (
 }
 
 $type-scale: (
-  'extra': variables-pix-to-rem(177),
-  'h1': variables-pix-to-rem(110),
-  'h2': variables-pix-to-rem(68),
-  'h3': variables-pix-to-rem(42),
-  'h4': variables-pix-to-rem(26),
+  'extra': variables-pix-to-rem(110),
+  'h1': variables-pix-to-rem(68),
+  'h2': variables-pix-to-rem(42),
+  'h3': variables-pix-to-rem(26),
   'subtitle': variables-pix-to-rem(26),
   'body': variables-pix-to-rem(16),
   'caption': variables-pix-to-rem(10),
 );
 
 $type-weight: (
-  'extra': 900,
+  'extra': 700,
   'h1': 400,
   'h2': 400,
-  'h3': 600,
-  'h4': 600,
-  'subtitle': 600,
+  'h3': 700,
+  'subtitle': 700,
   'body': 400,
   'caption': 400,
 );

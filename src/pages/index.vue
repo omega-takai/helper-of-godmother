@@ -6,14 +6,54 @@
       transition-group(
         appear
         tag="div"
+        :class="$style.wrapper"
       )
-        TheNuxtLogo(
-          key="logo"
-          :class="$style.logo"
-        )
-        BaseTypography(
-          :level="1"
-          text="Helper of Godmother"
+        div(
           key="title"
+          :class="$style.title"
         )
+          BaseTypography(
+            :level="1"
+            text="命名の助"
+          )
+          BaseTypography(
+            :level="4"
+            text="Helper of Godmother"
+          )
+        section(
+          :class="$style.section"
+          key="one"
+        )
+          BaseTypography(
+            :level="3"
+            text="素材文字をえらぶ"
+            :class="$style.element"
+          )
+          BindAlphabetButtons(
+            :class="$style.element"
+          )
+        section(
+          :class="$style.section"
+          key="two"
+        )
+          BaseTypography(
+            :level="3"
+            text="名前の長さをえらぶ"
+            :class="$style.element"
+          )
+          BindLengthButtons(
+            :class="$style.element"
+          )
+        section(
+          :class="$style.section"
+          key="three"
+        )
+          BaseTypography(
+            :level="3"
+            text="名前の候補をつくる"
+            :class="$style.element"
+          )
+          BindGenerateButton(
+            :class="$style.element"
+          )
 </template>

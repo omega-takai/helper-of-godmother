@@ -7,6 +7,6 @@
     :href="url"
     :class="className"
   )
-    slot
     span(v-text="text")
+    slot
 </template>
