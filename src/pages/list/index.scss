@@ -10,12 +10,23 @@
 .section {
   width: 100%;
   margin: {
-    top: base.pix-to-rem(48);
+    top: base.pix-to-rem(32);
   }
   .element {
     padding: {
       right: base.pix-to-rem(24);
       left: base.pix-to-rem(24);
     }
+  }
+}
+
+.wrapperBackButton {
+  padding: {
+    top: base.pix-to-rem(24);
+    right: base.pix-to-rem(24);
+    left: base.pix-to-rem(24);
+  }
+  .backButton {
+    font-size: base.type-scale('body');
   }
 }
