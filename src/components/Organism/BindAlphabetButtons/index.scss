@@ -22,7 +22,7 @@
   border-radius: base.pix-to-rem(4);
 
   &:hover {
-    color: white;
+    color: base.colors('white');
     background-color: base.colors('green');
   }
 }
