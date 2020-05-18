@@ -10,12 +10,12 @@
 .section {
   width: 100%;
   margin: {
-    top: base.pix-to-rem(32);
+    top: base.pix-to-rem(48);
   }
   .element {
     padding: {
-      right: base.pix-to-rem(16);
-      left: base.pix-to-rem(16);
+      right: base.pix-to-rem(24);
+      left: base.pix-to-rem(24);
     }
   }
 }

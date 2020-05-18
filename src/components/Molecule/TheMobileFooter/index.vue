@@ -4,10 +4,6 @@
   footer(:class="$style.footer")
     dl
       div(:class="$style.rowMobile")
-        dt Vuex Binding
-        dd
-          div {{ bindStatus }}
-      div(:class="$style.rowMobile")
         dt GitHub
         dd
           LinkTextWithIcon(
