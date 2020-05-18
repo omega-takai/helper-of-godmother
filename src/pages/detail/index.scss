@@ -1,0 +1,45 @@
+.wrapper {
+  flex: 1 1 100%;
+  width: 100%;
+  .section {
+    width: 100%;
+    margin: {
+      top: base.pix-to-rem(32);
+    }
+    .element {
+      padding: {
+        right: base.pix-to-rem(24);
+        left: base.pix-to-rem(24);
+      }
+    }
+    .text {
+      margin-top: base.pix-to-rem(16);
+      font-size: base.type-scale('body');
+    }
+  }
+
+  .theName {
+    margin: 0 auto;
+    font-size: base.type-scale('extra');
+    font-weight: base.type-weight('extra');
+    writing-mode: vertical-rl;
+
+    padding: {
+      top: base.pix-to-rem(24);
+      right: base.pix-to-rem(24);
+      bottom: base.pix-to-rem(24);
+      left: base.pix-to-rem(24);
+    }
+  }
+
+  .wrapperBackButton {
+    padding: {
+      top: base.pix-to-rem(32);
+      right: base.pix-to-rem(24);
+      left: base.pix-to-rem(24);
+    }
+    .backButton {
+      font-size: base.type-scale('body');
+    }
+  }
+}

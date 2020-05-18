@@ -8,8 +8,9 @@
         :key="i"
         :class="$style.li"
       )
-        button(
+        NuxtLink(
           :class="$style.button"
+          :to="`/detail?name=${val}`"
           v-text="val"
         )
 </template>

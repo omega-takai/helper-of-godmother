@@ -69,6 +69,7 @@ $type-family: (
 }
 
 $type-scale: (
+  'extra': variables-pix-to-rem(110),
   'h1': variables-pix-to-rem(68),
   'h2': variables-pix-to-rem(42),
   'h3': variables-pix-to-rem(26),
@@ -78,6 +79,7 @@ $type-scale: (
 );
 
 $type-weight: (
+  'extra': 700,
   'h1': 400,
   'h2': 400,
   'h3': 700,
