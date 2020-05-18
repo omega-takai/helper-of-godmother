@@ -1,0 +1,31 @@
+.wrapper {
+  display: block;
+  margin-top: base.pix-to-rem(16);
+}
+
+.note {
+  margin-bottom: base.pix-to-rem(16);
+  .li {
+    font-size: base.type-scale('body');
+    line-height: base.fonts('lineHeight');
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: base.pix-to-rem(40);
+  font-size: base.type-scale('body');
+  color: base.colors('green');
+  text-decoration: none;
+  word-wrap: break-word;
+  border: 1px solid base.colors('green');
+  border-radius: base.pix-to-rem(4);
+
+  &:hover {
+    color: base.colors('white');
+    background-color: base.colors('green');
+  }
+}
