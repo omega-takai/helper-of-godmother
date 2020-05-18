@@ -4,6 +4,13 @@
   footer(:class="$style.footer")
     dl
       div(:class="$style.rowMobile")
+        NuxtLinkTextWithIcon(
+          iconName="SmileIcon"
+          colorType="white"
+          text="このサイトについて"
+          url="/about"
+        )
+      div(:class="$style.rowMobile")
         dt GitHub
         dd
           LinkTextWithIcon(

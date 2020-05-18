@@ -14,6 +14,7 @@ import {
   GithubIcon,
   InstagramIcon,
   TwitterIcon,
+  SmileIcon,
 } from 'vue-feather-icons'
 
 export default {
@@ -31,6 +32,7 @@ export default {
     GithubIcon,
     InstagramIcon,
     TwitterIcon,
+    SmileIcon,
   },
   props: {
     iconSize: {
