@@ -9,5 +9,6 @@
       li(:class="$style.li") 組み合わせの計算式： 3² = 9通り
     button(
       :class="$style.button"
+      @click="generateNameList"
     ) 名前をつくる
 </template>
