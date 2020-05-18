@@ -8,16 +8,6 @@
         tag="div"
         :class="$style.wrapper"
       )
-        div(
-          key="back"
-          :class="$style.wrapperBackButton"
-        )
-          NuxtLinkTextWithIcon(
-            iconName="ArrowLeftIcon"
-            text="もどる"
-            url="/"
-            :class="$style.backButton"
-          )
         section(
           :class="$style.section"
           key="list"
@@ -29,5 +19,15 @@
           )
           BindNameList(
             :class="$style.element"
+          )
+        div(
+          key="back"
+          :class="$style.wrapperBackButton"
+        )
+          NuxtLinkTextWithIcon(
+            iconName="ArrowLeftIcon"
+            text="設定画面"
+            url="/"
+            :class="$style.backButton"
           )
 </template>
