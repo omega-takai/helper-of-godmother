@@ -20,9 +20,9 @@
           BaseTypography(
             :level="3"
             text="人名漢字を探す（外部リンク）"
-            :class="[$style.element, $style.sectionTitle]"
+            :class="$style.sectionTitle"
           )
-          ul(:class="$style.element")
+          ul(:class="$style.linkList")
             li(
               :class="$style.li"
               v-for="(val, index) in nameList"
@@ -32,6 +32,7 @@
                 iconName="ExternalLinkIcon"
                 :text="val"
                 :url="`${kanjiLink}${val}`"
+                :class="$style.button"
               )
         div(
           key="back"
