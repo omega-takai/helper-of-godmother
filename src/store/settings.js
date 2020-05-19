@@ -54,7 +54,7 @@ export const mutations = {
 
 // like methods
 export const actions = {
-  generateNameList({ state, getters }) {
+  generateNameList({ state, getters, dispatch }) {
     const listEnabled = getters.listAlphabetEnabled.map((obj) => {
       return obj.key
     })
@@ -70,7 +70,9 @@ export const actions = {
     const joinedList = [...list, ...listRevers]
     console.log(joinedList)
 
-    // this.$router.push('/list')
+    dispatch('name-list/updateList', joinedList, { root: true })
+
+    this.$router.push('/list')
   },
   toggleChar({ commit, state }, key) {
     const targetIndex = state.alphabetList.findIndex((char) => {

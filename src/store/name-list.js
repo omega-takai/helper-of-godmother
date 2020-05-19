@@ -18,7 +18,15 @@ export const state = () => ({
 export const getters = {}
 
 // like setters
-export const mutations = {}
+export const mutations = {
+  setList(state, arr) {
+    state.generatedList = arr
+  },
+}
 
 // like methods
-export const actions = {}
+export const actions = {
+  updateList({ commit }, list) {
+    commit('setList', list)
+  },
+}
