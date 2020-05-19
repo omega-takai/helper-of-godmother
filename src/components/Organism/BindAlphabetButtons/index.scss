@@ -37,7 +37,12 @@
   border: 1px solid base.colors('green');
   border-radius: base.pix-to-rem(4);
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: base.colors('white');
+    background-color: base.colors('green');
+  }
+  &.active {
     color: base.colors('white');
     background-color: base.colors('green');
   }

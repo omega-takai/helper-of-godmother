@@ -4,23 +4,23 @@
   div
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in alphabetJpHalfFirst"
+        v-for="(val, i) in alphabetListFirst"
         :key="i"
         :class="$style.li"
       )
         button(
-          :class="$style.button"
-          v-text="val"
+          :class="[$style.button, {[$style.active]: val.enabled}]"
+          v-text="val.key"
         )
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in alphabetJpHalfLast"
+        v-for="(val, i) in alphabetListLast"
         :key="i"
         :class="$style.li"
       )
         button(
-          :class="$style.button"
-          v-text="val"
+          :class="[$style.button, {[$style.active]: val.enabled}]"
+          v-text="val.key"
         )
       li(
         v-for="num in 4"
