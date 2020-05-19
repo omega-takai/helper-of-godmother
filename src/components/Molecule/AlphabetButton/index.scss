@@ -1,13 +1,3 @@
-.buttonContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: base.pix-to-rem(8);
-  margin-top: base.pix-to-rem(16);
-  .li {
-    display: block;
-  }
-}
-
 .button {
   display: flex;
   align-items: center;

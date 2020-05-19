@@ -11,12 +11,44 @@ export default {
     NuxtLinkTextWithIcon,
     LinkButtonWithIcon,
   },
-  computed: {
-    theName() {
-      return this.$route.query.name
+  data() {
+    return {
+      theName: '',
+      kanjiLink: 'https://jigen.net/data/人名用漢字?ou=100&to=',
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      this.theName = this.$route.query.name
     },
-    kanjiLink() {
-      return 'https://jigen.net/data/人名用漢字?ou=100&to='
+    listFiler(arr) {
+      return arr.filter((val, i, arr) => arr.indexOf(val) === i)
+    },
+  },
+  computed: {
+    alphabetList() {
+      const rawList = [...this.theName]
+      return this.listFiler(rawList)
+    },
+    nameList() {
+      const rawData = this.theName
+      const list = []
+
+      for (let i = 0; i < rawData.length; i++) {
+        for (let ind = rawData.length; ind > i + 1; ind--) {
+          list.push(rawData.substring(i, ind))
+        }
+      }
+
+      const joinedList = this.listFiler([...list, ...this.alphabetList])
+      const result = joinedList.sort((a, b) => {
+        // 文字列の長さでソートする
+        return b.length - a.length
+      })
+      return result
     },
   },
 }

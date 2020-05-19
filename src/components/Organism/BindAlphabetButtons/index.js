@@ -1,21 +1,15 @@
-// import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
+import AlphabetButton from '@/components/Molecule/AlphabetButton/index.vue'
 
 export default {
   name: 'BindAlphabetButtons',
-  data() {
-    return {
-      alphabetJpHalfFirst: 'あいうえおかきくけこさしすせそたちつてとなにぬねの'.split(
-        ''
-      ),
-      alphabetJpHalfLast: 'はひふへほまみむめもやゆよらりるれろわをん'.split(
-        ''
-      ),
-    }
+  components: {
+    AlphabetButton,
   },
-  // computed: {
-  //   ...mapGetters('material', [
-  //     'alphabetJpArrayHalfFirst',
-  //     'alphabetJpArrayHalfLast',
-  //   ]),
-  // },
+  computed: {
+    ...mapGetters('settings', ['alphabetListFirst', 'alphabetListLast']),
+  },
+  methods: {
+    ...mapActions('settings', ['toggleChar']),
+  },
 }

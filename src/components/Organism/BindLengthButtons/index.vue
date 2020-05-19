@@ -8,7 +8,8 @@
       :class="$style.li"
     )
       button(
-        :class="$style.button"
+        :class="[$style.button, {[$style.isActive]: val === generateNameLength}]"
         v-text="`${val}文字`"
+        @click="changeLength(val)"
       )
 </template>

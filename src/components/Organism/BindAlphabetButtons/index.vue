@@ -4,22 +4,29 @@
   div
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in alphabetJpHalfFirst"
+        v-for="(val, i) in alphabetListFirst"
         :key="i"
         :class="$style.li"
       )
-        button(
-          :class="$style.button"
-          v-text="val"
+        AlphabetButton(
+          :enabled="val.enabled"
+          :text="val.key"
+          @click.native="toggleChar(val.key)"
         )
     ul(:class="$style.buttonContainer")
       li(
-        v-for="(val, i) in alphabetJpHalfLast"
+        v-for="(val, i) in alphabetListLast"
         :key="i"
         :class="$style.li"
       )
-        button(
-          :class="$style.button"
-          v-text="val"
+        AlphabetButton(
+          :enabled="val.enabled"
+          :text="val.key"
+          @click.native="toggleChar(val.key)"
         )
+      li(
+        v-for="num in 4"
+        :class="$style[`spacer${num}`]"
+        :key="`spacer${num}`"
+      )
 </template>

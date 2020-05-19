@@ -15,7 +15,7 @@ const routerBase = process.env.BASE_DIR
 
 export default {
   head: {
-    title: process.env.npm_package_name || '',
+    title: '命名の助（メイメイノスケ）',
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },

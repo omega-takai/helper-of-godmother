@@ -1,14 +1,13 @@
-# Helper of Godmother
+# 命名の助（メイメイノスケ）
 
 ![DEPLOYMENT](https://github.com/t--takai/helper-of-godmother/workflows/DEPLOYMENT/badge.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/helper-of-godmother/blob/master/LICENSE)
 
-> hogehoge
+> 名前を考える手助けするための、ブラウザで動作するツールです。
 
 ## Web Application
 
 <https://t--takai.github.io/helper-of-godmother/>
-
 
 ## How to Develop
 

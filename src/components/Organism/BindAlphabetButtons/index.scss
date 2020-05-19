@@ -6,23 +6,20 @@
   .li {
     display: block;
   }
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: base.pix-to-rem(40);
-  font-size: base.type-scale('body');
-  color: base.colors('green');
-  text-decoration: none;
-  word-wrap: break-word;
-  border: 1px solid base.colors('green');
-  border-radius: base.pix-to-rem(4);
-
-  &:hover {
-    color: base.colors('white');
-    background-color: base.colors('green');
+  .spacer1 {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .spacer2 {
+    grid-row: 3;
+    grid-column: 4;
+  }
+  .spacer3 {
+    grid-row: 5;
+    grid-column: 2;
+  }
+  .spacer4 {
+    grid-row: 5;
+    grid-column: 4;
   }
 }

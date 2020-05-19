@@ -1,16 +1,16 @@
-// import { mapGetters } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'BindLengthButtons',
   data() {
     return {
-      nameLength: [2, 3, 4, 5, 6, 7],
+      nameLength: [...Array(6).keys()].map((i) => i + 2),
     }
   },
-  // computed: {
-  //   ...mapGetters('material', [
-  //     'alphabetJpArrayHalfFirst',
-  //     'alphabetJpArrayHalfLast',
-  //   ]),
-  // },
+  computed: {
+    ...mapState('settings', ['generateNameLength']),
+  },
+  methods: {
+    ...mapActions('settings', ['changeLength']),
+  },
 }
