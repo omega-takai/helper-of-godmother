@@ -25,6 +25,17 @@ export const getters = {
   alphabetListLast(state) {
     return state.alphabetList.slice(25)
   },
+  countAlphabetEnabled(state) {
+    const targetList = state.alphabetList.filter((char) => {
+      return char.enabled
+    })
+    console.log(targetList)
+
+    return targetList.length
+  },
+  countGenerateNames(state, getters) {
+    return getters.countAlphabetEnabled ** state.generateNameLength
+  },
 }
 
 // like setters
