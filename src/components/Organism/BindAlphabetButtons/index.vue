@@ -8,10 +8,10 @@
         :key="i"
         :class="$style.li"
       )
-        button(
-          :class="[$style.button, {[$style.active]: val.enabled}]"
-          v-text="val.key"
-          @click="toggleChar(val.key)"
+        AlphabetButton(
+          :enabled="val.enabled"
+          :text="val.key"
+          @click.native="toggleChar(val.key)"
         )
     ul(:class="$style.buttonContainer")
       li(
@@ -19,9 +19,10 @@
         :key="i"
         :class="$style.li"
       )
-        button(
-          :class="[$style.button, {[$style.active]: val.enabled}]"
-          v-text="val.key"
+        AlphabetButton(
+          :enabled="val.enabled"
+          :text="val.key"
+          @click.native="toggleChar(val.key)"
         )
       li(
         v-for="num in 4"
