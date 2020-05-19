@@ -22,4 +22,9 @@
           :class="$style.button"
           v-text="val"
         )
+      li(
+        v-for="num in 4"
+        :class="$style[`spacer${num}`]"
+        :key="`spacer${num}`"
+      )
 </template>
