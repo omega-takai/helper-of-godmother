@@ -25,13 +25,14 @@ export const getters = {
   alphabetListLast(state) {
     return state.alphabetList.slice(25)
   },
-  countAlphabetEnabled(state) {
+  listAlphabetEnabled(state) {
     const targetList = state.alphabetList.filter((char) => {
       return char.enabled
     })
-    console.log(targetList)
-
-    return targetList.length
+    return targetList
+  },
+  countAlphabetEnabled(_state, getters) {
+    return getters.listAlphabetEnabled.length
   },
   countGenerateNames(state, getters) {
     return getters.countAlphabetEnabled ** state.generateNameLength
@@ -53,8 +54,23 @@ export const mutations = {
 
 // like methods
 export const actions = {
-  generateNameList() {
-    this.$router.push('/list')
+  generateNameList({ state, getters }) {
+    const listEnabled = getters.listAlphabetEnabled.map((obj) => {
+      return obj.key
+    })
+    const selectedStr = listEnabled.join('')
+    const length = state.generateNameLength
+    const list = []
+    for (let i = 0; i < listEnabled.length - length + 1; i++) {
+      list.push(selectedStr.substring(i, i + length))
+    }
+    const listRevers = list.map((str) => {
+      return [...str].reverse().join('')
+    })
+    const joinedList = [...list, ...listRevers]
+    console.log(joinedList)
+
+    // this.$router.push('/list')
   },
   toggleChar({ commit, state }, key) {
     const targetIndex = state.alphabetList.findIndex((char) => {
