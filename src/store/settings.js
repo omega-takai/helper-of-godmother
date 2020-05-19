@@ -4,7 +4,7 @@ const alphabetRaw = [
 ]
 const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
-  return { key: val, enabled: val === 'い' || val === 'ろ' || val === 'は' }
+  return { key: val, enabled: ['い', 'ろ', 'は'].includes(val) }
 })
 
 // like data
