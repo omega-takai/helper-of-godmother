@@ -23,11 +23,28 @@ export const getters = {
 }
 
 // like setters
-export const mutations = {}
+export const mutations = {
+  setEnableChar(state, index) {
+    state.alphabetList[index].enabled = true
+  },
+  setDisableChar(state, index) {
+    state.alphabetList[index].enabled = false
+  },
+}
 
 // like methods
 export const actions = {
   generateNameList() {
     this.$router.push('/list')
+  },
+  toggleChar({ commit, state }, key) {
+    const targetIndex = state.alphabetList.findIndex((char) => {
+      return char.key === key
+    })
+    if (state.alphabetList[targetIndex].enabled) {
+      commit('setDisableChar', targetIndex)
+    } else {
+      commit('setEnableChar', targetIndex)
+    }
   },
 }
