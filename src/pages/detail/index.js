@@ -11,12 +11,31 @@ export default {
     NuxtLinkTextWithIcon,
     LinkButtonWithIcon,
   },
-  computed: {
-    theName() {
-      return this.$route.query.name
+  data() {
+    return {
+      theName: '',
+      kanjiLink: 'https://jigen.net/data/人名用漢字?ou=100&to=',
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      this.theName = this.$route.query.name
     },
-    kanjiLink() {
-      return 'https://jigen.net/data/人名用漢字?ou=100&to='
+  },
+  computed: {
+    alphabetList() {
+      const rawList = [...this.theName]
+      const filtered = rawList.filter((val, index, arr) => {
+        return arr.indexOf(val) === index
+      })
+      return filtered
+    },
+    nameList() {
+      const rawData = this.theName
+      return [rawData, ...this.alphabetList]
     },
   },
 }

@@ -23,23 +23,15 @@
             :class="[$style.element, $style.sectionTitle]"
           )
           ul(:class="$style.element")
-            li(:class="$style.li")
+            li(
+              :class="$style.li"
+              v-for="(val, index) in nameList"
+              :key="index"
+            )
               LinkButtonWithIcon(
                 iconName="ExternalLinkIcon"
-                text="あい"
-                :url="kanjiLink + 'あい'"
-              )
-            li(:class="$style.li")
-              LinkButtonWithIcon(
-                iconName="ExternalLinkIcon"
-                text="あ"
-                :url="kanjiLink + 'あ'"
-              )
-            li(:class="$style.li")
-              LinkButtonWithIcon(
-                iconName="ExternalLinkIcon"
-                text="い"
-                :url="kanjiLink + 'あ'"
+                :text="val"
+                :url="`${kanjiLink}${val}`"
               )
         div(
           key="back"
