@@ -58,14 +58,27 @@ export const actions = {
     const listEnabled = getters.listAlphabetEnabled.map((obj) => {
       return obj.key
     })
-    const selectedStr = listEnabled.join('')
     const nameLength = state.generateNameLength
-    const listGenerated = []
-    console.log(nameLength, selectedStr, listGenerated, listEnabled)
+    let listGenerated = []
+    if (nameLength < 3) {
+      listGenerated = listEnabled.map((val) => {
+        return listEnabled.map((v) => val + v)
+      })
+    } else {
+      listGenerated = listEnabled.map((val) => {
+        return listEnabled.map((v) => {
+          return listEnabled.map((value) => val + v + value)
+        })
+      })
+    }
 
-    // dispatch('name-list/updateList', joinedList, { root: true })
+    // console.log(nameLength, listGenerated)
 
-    // this.$router.push('/list')
+    dispatch('name-list/updateList', listGenerated.flat(nameLength - 1), {
+      root: true,
+    })
+
+    this.$router.push('/list')
   },
   toggleChar({ commit, state }, key) {
     const targetIndex = state.alphabetList.findIndex((char) => {
