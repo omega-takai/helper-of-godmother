@@ -61,20 +61,20 @@ export const actions = {
     const nameLength = state.generateNameLength
     let listGenerated = []
     if (nameLength < 3) {
-      listGenerated = listEnabled.map((val) => {
-        return listEnabled.map((v) => val + v)
+      listGenerated = listEnabled.flatMap((val) => {
+        return listEnabled.flatMap((v) => val + v)
       })
     } else {
-      listGenerated = listEnabled.map((val) => {
-        return listEnabled.map((v) => {
-          return listEnabled.map((value) => val + v + value)
+      listGenerated = listEnabled.flatMap((val) => {
+        return listEnabled.flatMap((v) => {
+          return listEnabled.flatMap((value) => val + v + value)
         })
       })
     }
 
     // console.log(nameLength, listGenerated)
 
-    dispatch('name-list/updateList', listGenerated.flat(nameLength - 1), {
+    dispatch('name-list/updateList', listGenerated, {
       root: true,
     })
 
