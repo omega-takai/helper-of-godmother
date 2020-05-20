@@ -4,7 +4,7 @@ const alphabetRaw = [
 ]
 const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
-  return { key: val, enabled: ['い', 'ろ', 'は'].includes(val) }
+  return { key: val, enabled: ['い', 'ろ', 'は', 'に'].includes(val) }
 })
 // const numArray = [...Array(6).keys()].map((i) => i + 2)
 // const defaultNumObj = numArray.map((val) => {
@@ -14,7 +14,7 @@ const defaultAlphabetObj = alphabetRaw.map((val) => {
 // like data
 export const state = () => ({
   alphabetList: defaultAlphabetObj,
-  generateNameLength: 2,
+  generateNameLength: 3,
 })
 
 // like computed
@@ -59,20 +59,13 @@ export const actions = {
       return obj.key
     })
     const selectedStr = listEnabled.join('')
-    const length = state.generateNameLength
-    const list = []
-    for (let i = 0; i < listEnabled.length - length + 1; i++) {
-      list.push(selectedStr.substring(i, i + length))
-    }
-    const listRevers = list.map((str) => {
-      return [...str].reverse().join('')
-    })
-    const joinedList = [...list, ...listRevers]
-    console.log(joinedList)
+    const nameLength = state.generateNameLength
+    const listGenerated = []
+    console.log(nameLength, selectedStr, listGenerated, listEnabled)
 
-    dispatch('name-list/updateList', joinedList, { root: true })
+    // dispatch('name-list/updateList', joinedList, { root: true })
 
-    this.$router.push('/list')
+    // this.$router.push('/list')
   },
   toggleChar({ commit, state }, key) {
     const targetIndex = state.alphabetList.findIndex((char) => {

@@ -1,7 +1,6 @@
 // like data
 export const state = () => ({
   generatedList: [
-    'てすとおお',
     'いい',
     'いろ',
     'いは',
