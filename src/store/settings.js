@@ -4,7 +4,7 @@ const alphabetRaw = [
 ]
 const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
-  return { key: val, enabled: ['い', 'ろ', 'は'].includes(val) }
+  return { key: val, enabled: ['い', 'ろ', 'は', 'に'].includes(val) }
 })
 // const numArray = [...Array(6).keys()].map((i) => i + 2)
 // const defaultNumObj = numArray.map((val) => {
@@ -14,7 +14,7 @@ const defaultAlphabetObj = alphabetRaw.map((val) => {
 // like data
 export const state = () => ({
   alphabetList: defaultAlphabetObj,
-  generateNameLength: 2,
+  generateNameLength: 3,
 })
 
 // like computed
@@ -58,19 +58,25 @@ export const actions = {
     const listEnabled = getters.listAlphabetEnabled.map((obj) => {
       return obj.key
     })
-    const selectedStr = listEnabled.join('')
-    const length = state.generateNameLength
-    const list = []
-    for (let i = 0; i < listEnabled.length - length + 1; i++) {
-      list.push(selectedStr.substring(i, i + length))
+    const nameLength = state.generateNameLength
+    let listGenerated = []
+    if (nameLength < 3) {
+      listGenerated = listEnabled.map((val) => {
+        return listEnabled.map((v) => val + v)
+      })
+    } else {
+      listGenerated = listEnabled.map((val) => {
+        return listEnabled.map((v) => {
+          return listEnabled.map((value) => val + v + value)
+        })
+      })
     }
-    const listRevers = list.map((str) => {
-      return [...str].reverse().join('')
-    })
-    const joinedList = [...list, ...listRevers]
-    console.log(joinedList)
 
-    dispatch('name-list/updateList', joinedList, { root: true })
+    // console.log(nameLength, listGenerated)
+
+    dispatch('name-list/updateList', listGenerated.flat(nameLength - 1), {
+      root: true,
+    })
 
     this.$router.push('/list')
   },
