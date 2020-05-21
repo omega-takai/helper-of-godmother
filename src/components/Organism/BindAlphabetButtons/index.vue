@@ -2,6 +2,21 @@
 <style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div
+    template(v-if="isEmptySelection")
+      p(:class="$style.notice") ※1文字以上えらんでください
+    ul(:class="$style.multipleSelectWrapper")
+      li(:class="$style.li")
+        AlphabetButton(
+          :enabled="isEmptySelection"
+          text="選択しない"
+          @click.native="unselectAll()"
+        )
+      li(:class="$style.li")
+        AlphabetButton(
+          :enabled="isSelectedAll"
+          text="全選択"
+          @click.native="selectAll()"
+        )
     ul(:class="$style.buttonContainer")
       li(
         v-for="(val, i) in alphabetListFirst"

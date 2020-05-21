@@ -1,3 +1,8 @@
+.notice {
+  margin-top: base.pix-to-rem(8);
+  font-size: base.type-scale('body');
+}
+
 .buttonContainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -21,5 +26,15 @@
   .spacer4 {
     grid-row: 5;
     grid-column: 4;
+  }
+}
+
+.multipleSelectWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: base.pix-to-rem(8);
+  margin-top: base.pix-to-rem(16);
+  .li {
+    display: block;
   }
 }

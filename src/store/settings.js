@@ -59,6 +59,15 @@ export const getters = {
     })
     return targetList
   },
+  isEmptySelection(_state, getters) {
+    return getters.listAlphabetEnabled.length <= 0
+  },
+  isSelectedAll(state, getters) {
+    return getters.listAlphabetEnabled.length >= state.alphabetList.length
+  },
+  hasSelection(_state, getters) {
+    return getters.listAlphabetEnabled.length > 0
+  },
   countAlphabetEnabled(_state, getters) {
     return getters.listAlphabetEnabled.length
   },
@@ -92,6 +101,16 @@ export const actions = {
     dispatch('name-list/updateList', listGenerated, { root: true })
 
     this.$router.push('/list')
+  },
+  unselectAll({ commit, state }) {
+    state.alphabetList.forEach((_val, i) => {
+      commit('setDisableChar', i)
+    })
+  },
+  selectAll({ commit, state }) {
+    state.alphabetList.forEach((_val, i) => {
+      commit('setEnableChar', i)
+    })
   },
   toggleChar({ commit, state }, key) {
     const targetIndex = state.alphabetList.findIndex((char) => {

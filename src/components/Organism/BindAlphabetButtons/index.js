@@ -7,9 +7,14 @@ export default {
     AlphabetButton,
   },
   computed: {
-    ...mapGetters('settings', ['alphabetListFirst', 'alphabetListLast']),
+    ...mapGetters('settings', [
+      'alphabetListFirst',
+      'alphabetListLast',
+      'isSelectedAll',
+      'isEmptySelection',
+    ]),
   },
   methods: {
-    ...mapActions('settings', ['toggleChar']),
+    ...mapActions('settings', ['toggleChar', 'unselectAll', 'selectAll']),
   },
 }
