@@ -6,10 +6,38 @@ const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
   return { key: val, enabled: ['い', 'ろ', 'は', 'に'].includes(val) }
 })
-// const numArray = [...Array(6).keys()].map((i) => i + 2)
-// const defaultNumObj = numArray.map((val) => {
-//   return { key: val, enabled: [2].includes(val) }
-// })
+
+/**
+ * @param {*[]} permutationOptions
+ * @param {number} permutationLength
+ * @return {*[]}
+ */
+export function permuteWithRepetitions(
+  permutationOptions,
+  permutationLength = permutationOptions.length
+) {
+  if (permutationLength === 1) {
+    return permutationOptions.map((permutationOption) => [permutationOption])
+  }
+
+  // Init permutations array.
+  const permutations = []
+
+  // Get smaller permutations.
+  const smallerPermutations = permuteWithRepetitions(
+    permutationOptions,
+    permutationLength - 1
+  )
+
+  // Go through all options and join it to the smaller permutations.
+  permutationOptions.forEach((currentOption) => {
+    smallerPermutations.forEach((smallerPermutation) => {
+      permutations.push([currentOption].concat(smallerPermutation).join(''))
+    })
+  })
+
+  return permutations
+}
 
 // like data
 export const state = () => ({
@@ -59,24 +87,9 @@ export const actions = {
       return obj.key
     })
     const nameLength = state.generateNameLength
-    let listGenerated = []
-    if (nameLength < 3) {
-      listGenerated = listEnabled.flatMap((val) => {
-        return listEnabled.flatMap((v) => val + v)
-      })
-    } else {
-      listGenerated = listEnabled.flatMap((val) => {
-        return listEnabled.flatMap((v) => {
-          return listEnabled.flatMap((value) => val + v + value)
-        })
-      })
-    }
+    const listGenerated = permuteWithRepetitions(listEnabled, nameLength)
 
-    // console.log(nameLength, listGenerated)
-
-    dispatch('name-list/updateList', listGenerated, {
-      root: true,
-    })
+    dispatch('name-list/updateList', listGenerated, { root: true })
 
     this.$router.push('/list')
   },
