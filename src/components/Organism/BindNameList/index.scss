@@ -28,6 +28,7 @@
   word-wrap: break-word;
   border: 1px solid base.colors('green');
   border-radius: base.pix-to-rem(4);
+  font-feature-settings: normal;
 
   &:hover {
     color: base.colors('white');

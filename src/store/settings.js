@@ -42,7 +42,7 @@ export function permuteWithRepetitions(
 // like data
 export const state = () => ({
   alphabetList: defaultAlphabetObj,
-  generateNameLength: 3,
+  generateNameLength: 2,
 })
 
 // like computed
