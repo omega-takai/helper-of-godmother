@@ -3,7 +3,7 @@
 ![DEPLOYMENT](https://github.com/t--takai/helper-of-godmother/workflows/DEPLOYMENT/badge.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/helper-of-godmother/blob/master/LICENSE)
 
-> 名前を考える手助けするための、ブラウザで動作するツールです。
+> 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
 
 ## Web Application
 

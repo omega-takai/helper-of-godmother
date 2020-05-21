@@ -14,7 +14,7 @@
         )
           BaseTypography(
             :level="3"
-            text="作られた名前リスト"
+            :text="pageTitle"
             :class="$style.element"
           )
           BindNameList(

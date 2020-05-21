@@ -19,7 +19,23 @@
           )
           P(
             :class="[$style.element, $style.text]"
-          ) 名前を考える手助けするための、ブラウザで動作するツールです。
+          ) 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+
+          ul(:class="$style.linkList")
+            li(:class="$style.li")
+              LinkButtonWithIcon(
+                iconName="ExternalLinkIcon"
+                text="法務省 子の名に使える漢字"
+                url="http://www.moj.go.jp/MINJI/minji86.html"
+                :class="$style.button"
+              )
+            li(:class="$style.li")
+              LinkButtonWithIcon(
+                iconName="ExternalLinkIcon"
+                text="法務省 戸籍統一文字情報 検索"
+                url="http://houmukyoku.moj.go.jp/KOSEKIMOJIDB/M01.html"
+                :class="$style.button"
+              )
         div(
           key="back"
           :class="$style.wrapperBackButton"

@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       theName: '',
-      kanjiLink: 'https://jigen.net/data/人名用漢字?ou=100&to=',
+      kanjiLink: 'https://b-name.jp/赤ちゃん名前辞典/?mode=1&sex=all&t=s&q=',
     }
   },
   created() {
