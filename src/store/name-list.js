@@ -14,7 +14,11 @@ export const state = () => ({
 })
 
 // like computed
-export const getters = {}
+export const getters = {
+  generatedListLength(state) {
+    return state.generatedList.length
+  },
+}
 
 // like setters
 export const mutations = {
