@@ -1,7 +1,7 @@
 {
   "name": "helper-of-godmother",
   "version": "1.1.0",
-  "description": "名前を考える手助けするための、ブラウザで動作するツールです。",
+  "description": "子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。",
   "author": "Tomonari Takai",
   "private": true,
   "scripts": {
