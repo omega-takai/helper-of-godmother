@@ -3,14 +3,13 @@
   margin-top: base.pix-to-rem(16);
 
   .generatedList {
-    $gap: base.pix-to-rem(4);
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: -$gap;
+    // 名前の長さが２文字のときに最適化
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: base.pix-to-rem(8);
+    margin-top: base.pix-to-rem(16);
     .li {
-      flex: 0 0 auto;
-      margin: $gap;
+      display: block;
     }
   }
 }
