@@ -1,7 +1,11 @@
 import { mapActions, mapState } from 'vuex'
+import BaseLayout from '@/components/Template/BaseLayout/index.vue'
 
 export default {
   name: 'LayoutDefault',
+  components: {
+    BaseLayout,
+  },
   data() {
     return {
       localFlagIsMobile: true,
