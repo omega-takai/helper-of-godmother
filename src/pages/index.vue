@@ -20,6 +20,21 @@
             :level="4"
             text="Helper of Godmother"
           )
+          P(
+            :class="[$style.element, $style.text]"
+          ) 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+        section(
+          :class="$style.section"
+          key="list"
+        )
+          BaseTypography(
+            :level="3"
+            :text="pageTitle"
+            :class="$style.element"
+          )
+          BindNameList(
+            :class="$style.element"
+          )
         section(
           :class="$style.section"
           key="one"

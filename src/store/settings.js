@@ -100,7 +100,7 @@ export const actions = {
 
     dispatch('name-list/updateList', listGenerated, { root: true })
 
-    this.$router.push('/list')
+    // this.$router.push('/list')
   },
   unselectAll({ commit, state }) {
     state.alphabetList.forEach((_val, i) => {
