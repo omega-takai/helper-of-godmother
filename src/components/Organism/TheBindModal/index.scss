@@ -1,0 +1,30 @@
+.baseLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: base.colors('blackAlpha');
+  padding: {
+    right: base.pix-to-rem(8);
+    left: base.pix-to-rem(8);
+  }
+
+  .container {
+    background-color: base.colors('background');
+    border-radius: base.pix-to-rem(16);
+    padding: {
+      top: base.pix-to-rem(32);
+      right: base.pix-to-rem(16);
+      bottom: base.pix-to-rem(32);
+      left: base.pix-to-rem(16);
+    }
+    margin: {
+      top: base.pix-to-rem(56);
+      bottom: base.pix-to-rem(56);
+    }
+  }
+}
