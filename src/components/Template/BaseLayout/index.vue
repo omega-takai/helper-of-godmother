@@ -3,9 +3,6 @@
 <template lang="pug">
   div(:class="$style.layout")
 
-    main(:class="$style.main")
-      slot
-
     header(:class="$style.header")
       NuxtLink(
         to="/"
@@ -13,5 +10,13 @@
         :class="$style.logo"
       )
 
+    main(:class="$style.main")
+      button(
+        @click="showModal()"
+        :class="$style.button"
+      ) モーダルを表示する
+      slot
+
     TheBindFooter(:class="$style.footer")
+    TheBindModal
 </template>
