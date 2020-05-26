@@ -8,6 +8,9 @@ export const getters = {
   generatedListLength(state) {
     return state.generatedList.length
   },
+  nameLength(state) {
+    return state.generatedList[0].length
+  },
 }
 
 // like setters
