@@ -16,6 +16,10 @@
         :class="$style.button"
       ) モーダルを表示する
       slot
+      button(
+        @click="showModal()"
+        :class="$style.button"
+      ) モーダルを表示する
 
     TheBindFooter(:class="$style.footer")
     TheBindModal

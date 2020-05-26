@@ -7,5 +7,22 @@
     title="aaa"
   )
     template(#default)
-      span コンテンツ
+      section(:class="$style.section")
+        BaseTypography(
+          :level="3"
+          text="素材文字をえらぶ"
+        )
+        BindAlphabetButtons
+      section(:class="$style.section")
+        BaseTypography(
+          :level="3"
+          text="名前の長さをえらぶ"
+        )
+        BindLengthButtons
+      section(:class="$style.section")
+        BaseTypography(
+          :level="3"
+          text="名前の候補をつくる"
+        )
+        BindGenerateButton
 </template>

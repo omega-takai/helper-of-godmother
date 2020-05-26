@@ -18,9 +18,10 @@
         :level="4"
         text="Helper of Godmother"
       )
-      P(
-        :class="[$style.element, $style.text]"
-      ) 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+      P(:class="[$style.element, $style.text]")
+        | 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+        br
+        | ※当サイトは入力内容を保存しません。
     section(
       :class="$style.section"
       key="list"
@@ -31,42 +32,6 @@
         :class="$style.element"
       )
       BindNameList(
-        :class="$style.element"
-      )
-    section(
-      :class="$style.section"
-      key="one"
-    )
-      BaseTypography(
-        :level="3"
-        text="素材文字をえらぶ"
-        :class="$style.element"
-      )
-      BindAlphabetButtons(
-        :class="$style.element"
-      )
-    section(
-      :class="$style.section"
-      key="two"
-    )
-      BaseTypography(
-        :level="3"
-        text="名前の長さをえらぶ"
-        :class="$style.element"
-      )
-      BindLengthButtons(
-        :class="$style.element"
-      )
-    section(
-      :class="$style.section"
-      key="three"
-    )
-      BaseTypography(
-        :level="3"
-        text="名前の候補をつくる"
-        :class="$style.element"
-      )
-      BindGenerateButton(
         :class="$style.element"
       )
 </template>
