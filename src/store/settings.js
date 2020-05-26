@@ -101,6 +101,11 @@ export const actions = {
     dispatch('name-list/updateList', listGenerated, { root: true })
 
     // this.$router.push('/list')
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
   },
   unselectAll({ commit, state }) {
     state.alphabetList.forEach((_val, i) => {
