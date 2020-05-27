@@ -12,10 +12,6 @@
 
     main(:class="$style.main")
       slot
-      //- button(
-      //-   @click="showModal()"
-      //-   :class="$style.button"
-      //- ) モーダルを表示する
 
     BaseNavigation(
       :class="$style.navigation"

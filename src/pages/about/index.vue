@@ -34,14 +34,4 @@
             url="http://houmukyoku.moj.go.jp/KOSEKIMOJIDB/M01.html"
             :class="$style.button"
           )
-    div(
-      key="back"
-      :class="$style.wrapperBackButton"
-    )
-      NuxtLinkTextWithIcon(
-        iconName="ArrowLeftIcon"
-        text="設定画面"
-        url="/"
-        :class="$style.backButton"
-      )
 </template>

@@ -32,23 +32,4 @@
             :url="`${kanjiLink}${val}`"
             :class="$style.button"
           )
-    div(
-      key="back"
-      :class="$style.wrapperBackButton"
-    )
-      ul
-        li
-          NuxtLinkTextWithIcon(
-            iconName="ArrowLeftIcon"
-            text="作られた名前リスト"
-            url="/list"
-            :class="$style.backButton"
-          )
-        li
-          NuxtLinkTextWithIcon(
-            iconName="ArrowLeftIcon"
-            text="設定画面"
-            url="/"
-            :class="$style.backButton"
-          )
 </template>

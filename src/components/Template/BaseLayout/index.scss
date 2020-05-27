@@ -14,17 +14,6 @@
       top: base.pix-to-rem(56);
       bottom: base.pix-to-rem(80);
     }
-    .button {
-      height: base.pix-to-rem(40);
-      padding: 1rem;
-      margin: 4rem;
-      font-size: base.type-scale('body');
-      color: base.colors('green');
-      text-decoration: none;
-      word-wrap: break-word;
-      border: 1px solid base.colors('green');
-      border-radius: base.pix-to-rem(4);
-    }
   }
 
   .navigation {
