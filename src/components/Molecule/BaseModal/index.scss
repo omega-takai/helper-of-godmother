@@ -1,0 +1,92 @@
+.baseLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background-color: base.colors('blackAlpha');
+  padding: {
+    top: base.pix-to-rem(8);
+    right: base.pix-to-rem(8);
+    left: base.pix-to-rem(8);
+  }
+  .scrollArea {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: {
+      top-left-radius: base.pix-to-rem(16);
+      top-right-radius: base.pix-to-rem(16);
+    }
+  }
+
+  .container {
+    margin: {
+      top: base.pix-to-rem(48);
+      bottom: base.pix-to-rem(24);
+    }
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      height: base.pix-to-rem(56);
+      background-color: base.colors('background');
+      padding: {
+        top: base.pix-to-rem(8);
+        right: base.pix-to-rem(16);
+        bottom: base.pix-to-rem(8);
+        left: base.pix-to-rem(16);
+      }
+      border: {
+        top-right-radius: base.pix-to-rem(16);
+        top-left-radius: base.pix-to-rem(16);
+        bottom-left-radius: 0;
+        bottom-right-radius: 0;
+      }
+      .headerText {
+        display: flex;
+        align-items: center;
+        max-width: 100vw;
+        height: 100%;
+        font-size: base.type-scale('body');
+        font-weight: base.type-weight('subtitle');
+        line-height: 1.15;
+        color: base.colors('inverted');
+        letter-spacing: 0.1em;
+        word-wrap: break-word;
+        white-space: pre-line;
+        .icon {
+          margin-right: base.pix-to-rem(4);
+        }
+      }
+      .closeButton {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: base.pix-to-rem(56);
+        height: base.pix-to-rem(56);
+      }
+    }
+    .body {
+      overflow: hidden;
+      background-color: base.colors('background');
+      padding: {
+        top: base.pix-to-rem(16);
+        right: base.pix-to-rem(16);
+        bottom: base.pix-to-rem(56);
+        left: base.pix-to-rem(16);
+      }
+      border: {
+        top-right-radius: 0;
+        top-left-radius: 0;
+        bottom-left-radius: base.pix-to-rem(16);
+        bottom-right-radius: base.pix-to-rem(16);
+      }
+    }
+  }
+}

@@ -1,22 +1,15 @@
 // like data
 export const state = () => ({
-  generatedList: [
-    'いい',
-    'いろ',
-    'いは',
-    'ろい',
-    'ろろ',
-    'ろは',
-    'はい',
-    'はろ',
-    'はは',
-  ],
+  generatedList: ['さんぷる', 'たろう', 'はなこ'],
 })
 
 // like computed
 export const getters = {
   generatedListLength(state) {
     return state.generatedList.length
+  },
+  nameLength(state) {
+    return state.generatedList[0].length
   },
 }
 

@@ -18,17 +18,6 @@
     }
   }
 
-  .wrapperBackButton {
-    padding: {
-      top: base.pix-to-rem(32);
-      right: base.pix-to-rem(24);
-      left: base.pix-to-rem(24);
-    }
-    .backButton {
-      font-size: base.type-scale('body');
-    }
-  }
-
   .linkList {
     display: grid;
     gap: base.pix-to-rem(8);

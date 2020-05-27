@@ -4,7 +4,8 @@ const alphabetRaw = [
 ]
 const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
-  return { key: val, enabled: ['い', 'ろ', 'は', 'に'].includes(val) }
+  // return { key: val, enabled: [...'いろはに'].includes(val) }
+  return { key: val, enabled: false }
 })
 
 /**
@@ -99,8 +100,14 @@ export const actions = {
     const listGenerated = permuteWithRepetitions(listEnabled, nameLength)
 
     dispatch('name-list/updateList', listGenerated, { root: true })
+    dispatch('modal/closeModal', null, { root: true })
 
-    this.$router.push('/list')
+    this.$router.push('/')
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
   },
   unselectAll({ commit, state }) {
     state.alphabetList.forEach((_val, i) => {

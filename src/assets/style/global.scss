@@ -18,6 +18,7 @@ html {
 // SEE: https://blogs.adobe.com/japan/cc-web-ui-ux-animation-principles-tips-tricks-best-practices/
 
 // Enter
+$out-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
 .v-enter {
   opacity: 0;
 }
@@ -25,12 +26,20 @@ html {
   opacity: 1;
 }
 .v-enter-active {
-  $out-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
-
   transition: opacity 1s $out-cubic;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: opacity 0.3s $out-cubic;
 }
 
 // Leave
+$in-cubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
 .v-leave {
   opacity: 1;
 }
@@ -38,7 +47,14 @@ html {
   opacity: 0;
 }
 .v-leave-active {
-  $in-cubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
-
   transition: opacity 2s $in-cubic;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-leave-active {
+  transition: opacity 0.3s $in-cubic;
 }

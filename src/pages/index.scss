@@ -12,10 +12,15 @@
   margin: {
     top: base.pix-to-rem(48);
   }
-  .element {
-    padding: {
-      right: base.pix-to-rem(24);
-      left: base.pix-to-rem(24);
-    }
+}
+.element {
+  padding: {
+    right: base.pix-to-rem(24);
+    left: base.pix-to-rem(24);
   }
+}
+.text {
+  margin-top: base.pix-to-rem(16);
+  font-size: base.type-scale('body');
+  text-align: left;
 }

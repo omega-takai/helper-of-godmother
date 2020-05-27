@@ -1,17 +1,40 @@
+@mixin generated-list($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: base.pix-to-rem(8);
+  margin-top: base.pix-to-rem(16);
+  .li {
+    display: block;
+  }
+}
+
 .wrapper {
   display: block;
   margin-top: base.pix-to-rem(16);
 
-  .generatedList {
-    $gap: base.pix-to-rem(4);
-
-    display: flex;
-    flex-wrap: wrap;
-    margin: -$gap;
-    .li {
-      flex: 0 0 auto;
-      margin: $gap;
-    }
+  .generatedList02 {
+    // 名前の長さが2文字のときに最適化
+    @include generated-list(5);
+  }
+  .generatedList03 {
+    // 名前の長さが3文字のときに最適化
+    @include generated-list(4);
+  }
+  .generatedList04 {
+    // 名前の長さが4文字のときに最適化
+    @include generated-list(3);
+  }
+  .generatedList05 {
+    // 名前の長さが5文字のときに最適化
+    @include generated-list(3);
+  }
+  .generatedList06 {
+    // 名前の長さが6文字のときに最適化
+    @include generated-list(2);
+  }
+  .generatedList07 {
+    // 名前の長さが7文字のときに最適化
+    @include generated-list(2);
   }
 }
 
@@ -28,7 +51,7 @@
   word-wrap: break-word;
   border: 1px solid base.colors('green');
   border-radius: base.pix-to-rem(4);
-  font-feature-settings: normal;
+  // font-feature-settings: normal;
 
   &:hover {
     color: base.colors('white');
