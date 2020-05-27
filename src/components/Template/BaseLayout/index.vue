@@ -11,15 +11,13 @@
       )
 
     main(:class="$style.main")
-      button(
-        @click="showModal()"
-        :class="$style.button"
-      ) モーダルを表示する
       slot
-      button(
-        @click="showModal()"
-        :class="$style.button"
-      ) モーダルを表示する
+      //- button(
+      //-   @click="showModal()"
+      //-   :class="$style.button"
+      //- ) モーダルを表示する
+
+    BaseNavigation(:class="$style.navigation")
 
     TheBindFooter(:class="$style.footer")
     transition(name="fade")

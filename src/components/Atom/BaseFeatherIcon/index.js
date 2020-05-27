@@ -18,10 +18,10 @@ import {
   ExternalLinkIcon,
   XIcon,
   EditIcon,
-  AlignLeftIcon,
+  ListIcon,
   HomeIcon,
   InfoIcon,
-  TrashIcon,
+  RefreshCwIcon,
   SettingsIcon,
 } from 'vue-feather-icons'
 
@@ -44,10 +44,10 @@ export default {
     ExternalLinkIcon,
     XIcon,
     EditIcon,
-    AlignLeftIcon,
+    ListIcon,
     HomeIcon,
     InfoIcon,
-    TrashIcon,
+    RefreshCwIcon,
     SettingsIcon,
   },
   props: {

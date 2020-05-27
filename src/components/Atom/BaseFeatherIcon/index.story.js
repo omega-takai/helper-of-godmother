@@ -22,10 +22,10 @@ const icons = [
   'ExternalLinkIcon',
   'XIcon',
   'EditIcon',
-  'AlignLeftIcon',
+  'ListIcon',
   'HomeIcon',
   'InfoIcon',
-  'TrashIcon',
+  'RefreshCwIcon',
   'SettingsIcon',
 ]
 
