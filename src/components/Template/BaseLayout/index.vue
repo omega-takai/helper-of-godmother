@@ -13,14 +13,16 @@
     main(:class="$style.main")
       slot
 
-    BaseNavigation(
-      :class="$style.navigation"
-      @onClickHome="goToHome()"
-      @onClickList="goToList()"
-      @onClickEdit="generateNames()"
-      @onClickReset="restoreAll()"
-      @onClickSettings="showSettings()"
-    )
+    transition(name="fade")
+      BaseNavigation(
+        v-if="!isVisibleModal"
+        :class="$style.navigation"
+        @onClickHome="goToHome()"
+        @onClickList="goToList()"
+        @onClickEdit="generateNames()"
+        @onClickReset="restoreAll()"
+        @onClickSettings="showSettings()"
+      )
 
     TheBindFooter(:class="$style.footer")
     transition(name="fade")
