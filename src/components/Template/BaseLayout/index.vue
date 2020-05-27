@@ -26,5 +26,8 @@
 
     TheBindFooter(:class="$style.footer")
     transition(name="fade")
-      TheBindModal(v-if="isVisibleModal")
+      TheBindModal(
+        v-if="isVisibleModal"
+        :class="$style.modal"
+      )
 </template>
