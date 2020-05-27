@@ -29,7 +29,9 @@ export const actions = {
     dispatch('modal/showModal', null, { root: true })
   },
   restoreAll() {
-    window.location.assign('/')
+    // TODO: gh-pagesによりbaseURLが変わる
+    // window.location.assign('/')
+    window.location.reload()
   },
   showSettings() {
     alert('現在設定できるものがありません')
