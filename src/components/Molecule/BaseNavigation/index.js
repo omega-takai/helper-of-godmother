@@ -5,4 +5,9 @@ export default {
   components: {
     BaseFeatherIcon,
   },
+  methods: {
+    onClickEdit() {
+      this.$emit('onClickEdit')
+    },
+  },
 }

@@ -13,7 +13,10 @@
           iconName="ListIcon"
           :class="$style.icon"
         )
-      li(:class="$style.listItem")
+      li(
+        :class="$style.listItem"
+        @click="onClickEdit()"
+      )
         BaseFeatherIcon(
           iconName="EditIcon"
           :class="$style.icon"

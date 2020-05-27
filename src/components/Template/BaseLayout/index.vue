@@ -17,7 +17,10 @@
       //-   :class="$style.button"
       //- ) モーダルを表示する
 
-    BaseNavigation(:class="$style.navigation")
+    BaseNavigation(
+      :class="$style.navigation"
+      @onClickEdit="showModal()"
+    )
 
     TheBindFooter(:class="$style.footer")
     transition(name="fade")
