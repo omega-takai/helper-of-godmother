@@ -14,18 +14,39 @@
     display: block;
     width: base.pix-to-rem(44);
     height: base.pix-to-rem(44);
+    user-select: none;
     opacity: 0.5;
+    .icon {
+      display: block;
+      font-size: base.pix-to-rem(20);
+      color: base.colors('white');
+      margin: {
+        top: base.pix-to-rem(8);
+        right: auto;
+        left: auto;
+      }
+    }
+    &:focus,
     &:hover {
+      cursor: pointer;
       opacity: 1;
+      .icon {
+        margin-top: base.pix-to-rem(4);
+        font-size: base.pix-to-rem(24);
+      }
     }
     &:not(:first-of-type) {
       margin-left: base.pix-to-rem(8);
     }
+    .text {
+      margin: {
+        top: base.pix-to-rem(4);
+      }
+
+      font-size: base.type-scale('caption');
+      line-height: 1;
+      color: base.colors('white');
+      text-align: center;
+    }
   }
-}
-.icon {
-  display: block;
-  margin: base.pix-to-rem(12) auto 0;
-  font-size: base.pix-to-rem(20);
-  color: base.colors('white');
 }
