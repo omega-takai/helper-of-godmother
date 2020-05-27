@@ -15,7 +15,11 @@
 
     BaseNavigation(
       :class="$style.navigation"
-      @onClickEdit="showModal()"
+      @onClickHome="goToHome()"
+      @onClickList="goToList()"
+      @onClickEdit="generateNames()"
+      @onClickReset="restoreAll()"
+      @onClickSettings="showSettings()"
     )
 
     TheBindFooter(:class="$style.footer")

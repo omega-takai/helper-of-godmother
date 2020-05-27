@@ -14,6 +14,12 @@ export default {
     ...mapState('modal', ['isVisibleModal']),
   },
   methods: {
-    ...mapActions('modal', ['showModal']),
+    ...mapActions('navigation', [
+      'goToHome',
+      'goToList',
+      'generateNames',
+      'restoreAll',
+      'showSettings',
+    ]),
   },
 }
