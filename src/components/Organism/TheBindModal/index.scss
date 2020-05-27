@@ -1,6 +1,18 @@
 .section {
   width: 100%;
-  margin: {
-    top: base.pix-to-rem(48);
+  &:not(:first-of-type) {
+    margin: {
+      top: base.pix-to-rem(48);
+    }
+  }
+  .sectionTitle {
+    display: block;
+    max-width: 100vw;
+    font-size: base.type-scale('subtitle');
+    font-weight: base.type-weight('subtitle');
+    line-height: 1.15;
+    color: base.colors('font');
+    word-wrap: break-word;
+    white-space: pre-line;
   }
 }

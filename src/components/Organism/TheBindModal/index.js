@@ -1,4 +1,4 @@
-import { mapActions, mapState } from 'vuex'
+import { mapActions } from 'vuex'
 import BaseModal from '@/components/Molecule/BaseModal/index.vue'
 import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 import BindAlphabetButtons from '@/components/Organism/BindAlphabetButtons/index.vue'
@@ -13,9 +13,6 @@ export default {
     BindAlphabetButtons,
     BindLengthButtons,
     BindGenerateButton,
-  },
-  computed: {
-    ...mapState('modal', ['isVisibleModal']),
   },
   methods: {
     ...mapActions('modal', ['closeModal']),

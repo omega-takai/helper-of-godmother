@@ -22,5 +22,6 @@
       ) モーダルを表示する
 
     TheBindFooter(:class="$style.footer")
-    TheBindModal
+    transition(name="fade")
+      TheBindModal(v-if="isVisibleModal")
 </template>

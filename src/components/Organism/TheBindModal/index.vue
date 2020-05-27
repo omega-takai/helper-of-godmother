@@ -2,26 +2,24 @@
 <style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   BaseModal(
-    v-show="isVisibleModal"
     @onClickClose="closeModal()"
-    title="aaa"
+    title="名前をつくる設定"
   )
     template(#default)
       section(:class="$style.section")
-        BaseTypography(
-          :level="3"
-          text="素材文字をえらぶ"
-        )
+        h2(
+          :class="$style.sectionTitle"
+        ) 素材文字をえらぶ
         BindAlphabetButtons
       section(:class="$style.section")
         BaseTypography(
-          :level="3"
+          :level="4"
           text="名前の長さをえらぶ"
         )
         BindLengthButtons
       section(:class="$style.section")
         BaseTypography(
-          :level="3"
+          :level="4"
           text="名前の候補をつくる"
         )
         BindGenerateButton

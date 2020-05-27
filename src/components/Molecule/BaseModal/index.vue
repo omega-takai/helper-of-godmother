@@ -11,8 +11,15 @@
     )
       section(:class="$style.container")
         div(:class="$style.header")
-          h1 {{ title }}
+          h1(:class="$style.headerText")
+            BaseFeatherIcon(
+              iconName="EditIcon"
+              iconSize="1.5x"
+              :class="$style.icon"
+            )
+            span {{ title }}
           button(
+            :class="$style.closeButton"
             @click.stop="closeModal()"
           )
             BaseFeatherIcon(
