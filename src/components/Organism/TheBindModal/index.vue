@@ -12,15 +12,13 @@
         ) 素材文字をえらぶ
         BindAlphabetButtons
       section(:class="$style.section")
-        BaseTypography(
-          :level="4"
-          text="名前の長さをえらぶ"
-        )
+        h2(
+          :class="$style.sectionTitle"
+        ) 名前の長さをえらぶ
         BindLengthButtons
       section(:class="$style.section")
-        BaseTypography(
-          :level="4"
-          text="名前の候補をつくる"
-        )
+        h2(
+          :class="$style.sectionTitle"
+        ) 名前の候補をつくる
         BindGenerateButton
 </template>
