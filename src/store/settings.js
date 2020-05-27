@@ -4,7 +4,8 @@ const alphabetRaw = [
 ]
 const defaultAlphabetObj = alphabetRaw.map((val) => {
   // デフォルトでいくつか選択させておく
-  return { key: val, enabled: ['い', 'ろ', 'は', 'に'].includes(val) }
+  // return { key: val, enabled: [...'いろはに'].includes(val) }
+  return { key: val, enabled: false }
 })
 
 /**

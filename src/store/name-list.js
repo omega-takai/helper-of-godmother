@@ -1,6 +1,6 @@
 // like data
 export const state = () => ({
-  generatedList: ['サンプル', 'たろう', 'はなこ'],
+  generatedList: ['さんぷる', 'たろう', 'はなこ'],
 })
 
 // like computed
