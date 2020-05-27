@@ -20,6 +20,13 @@ const icons = [
   'TwitterIcon',
   'SmileIcon',
   'ExternalLinkIcon',
+  'XIcon',
+  'EditIcon',
+  'AlignLeftIcon',
+  'HomeIcon',
+  'InfoIcon',
+  'TrashIcon',
+  'SettingsIcon',
 ]
 
 storiesOf('Design System|Atom/BaseFeatherIcon', module)

@@ -16,6 +16,13 @@ import {
   TwitterIcon,
   SmileIcon,
   ExternalLinkIcon,
+  XIcon,
+  EditIcon,
+  AlignLeftIcon,
+  HomeIcon,
+  InfoIcon,
+  TrashIcon,
+  SettingsIcon,
 } from 'vue-feather-icons'
 
 export default {
@@ -35,6 +42,13 @@ export default {
     TwitterIcon,
     SmileIcon,
     ExternalLinkIcon,
+    XIcon,
+    EditIcon,
+    AlignLeftIcon,
+    HomeIcon,
+    InfoIcon,
+    TrashIcon,
+    SettingsIcon,
   },
   props: {
     iconSize: {

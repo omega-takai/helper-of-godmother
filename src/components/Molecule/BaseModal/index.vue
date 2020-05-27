@@ -5,12 +5,20 @@
     :class="$style.baseLayer"
     @click.self.stop="closeModal()"
   )
-    section(:class="$style.container")
-      div
-        h1 {{ title }}
-        button(
-          @click.self.stop="closeModal()"
-        ) ×
-      div
-        slot
+    div(
+      :class="$style.scrollArea"
+      @click.self.stop="closeModal()"
+    )
+      section(:class="$style.container")
+        div(:class="$style.header")
+          h1 {{ title }}
+          button(
+            @click.stop="closeModal()"
+          )
+            BaseFeatherIcon(
+              iconName="XIcon"
+              iconSize="24"
+            )
+        div(:class="$style.body")
+          slot
 </template>
