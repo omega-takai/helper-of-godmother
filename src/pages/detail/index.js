@@ -17,6 +17,11 @@ export default {
       alphabetList: [],
     }
   },
+  head() {
+    return {
+      title: this.theName,
+    }
+  },
   created() {
     this.fetchData()
   },

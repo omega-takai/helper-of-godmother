@@ -10,10 +10,20 @@ export default {
     BindNameList,
     NuxtLinkTextWithIcon,
   },
+  data() {
+    return {
+      baseTitle: '作られた名前リスト',
+    }
+  },
   computed: {
     ...mapGetters('name-list', ['generatedListLength']),
     pageTitle() {
-      return `作られた名前リスト(${this.generatedListLength})`
+      return `${this.baseTitle}(${this.generatedListLength})`
     },
+  },
+  head() {
+    return {
+      title: this.baseTitle,
+    }
   },
 }

@@ -9,4 +9,9 @@ export default {
     NuxtLinkTextWithIcon,
     LinkButtonWithIcon,
   },
+  head() {
+    return {
+      title: 'このサイトについて',
+    }
+  },
 }
