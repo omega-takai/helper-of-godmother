@@ -3,13 +3,6 @@
 <template lang="pug">
   div(:class="$style.layout")
 
-    header(:class="$style.header")
-      NuxtLink(
-        to="/"
-        v-text="'助'"
-        :class="$style.logo"
-      )
-
     main(:class="$style.main")
       slot
 

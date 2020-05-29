@@ -13,7 +13,7 @@
     min-height: 100vh;
     margin: 0 auto;
     padding: {
-      top: base.pix-to-rem(56);
+      top: base.pix-to-rem(24);
       bottom: base.pix-to-rem(80);
     }
   }
@@ -24,26 +24,6 @@
     left: 0;
     z-index: 1;
     width: 100%;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: base.pix-to-rem(48);
-    padding-top: base.pix-to-rem(8);
-    background-color: base.colors('whiteAlpha');
-    .logo {
-      display: inline-block;
-      width: base.pix-to-rem(40);
-      height: base.pix-to-rem(40);
-      margin-left: base.pix-to-rem(8);
-      font-size: base.type-scale('subtitle');
-      font-weight: base.type-weight('subtitle');
-      line-height: base.pix-to-rem(40);
-      text-align: center;
-    }
   }
 
   .footer {
