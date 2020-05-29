@@ -14,30 +14,35 @@ const routerBase = process.env.BASE_DIR
   : {}
 
 export default {
-  head: {
-    title: '命名の助（メイメイノスケ）',
-    meta: [
-      { charset: 'utf-8' },
-      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || '',
+  head() {
+    return {
+      titleTemplate(titleChunk) {
+        const siteTitle = '命名の助（メイメイノスケ）'
+        return titleChunk ? `${titleChunk} - ${siteTitle}` : siteTitle
       },
-    ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: `${process.env.BASE_DIR || '/'}favicon.ico`,
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese',
-      },
-    ],
+      meta: [
+        { charset: 'utf-8' },
+        { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: process.env.npm_package_description || '',
+        },
+      ],
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: `${process.env.BASE_DIR || '/'}favicon.ico`,
+        },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap&subset=japanese',
+        },
+      ],
+    }
   },
   loading: { color: '#ddd' },
   css: ['@/assets/style/global.scss'],
