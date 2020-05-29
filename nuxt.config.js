@@ -24,6 +24,7 @@ export default {
       titleTemplate(titleChunk) {
         return titleChunk ? `${titleChunk} - ${siteName}` : siteName
       },
+      htmlAttrs: { prefix: 'og: http://ogp.me/ns#' },
       meta: [
         { charset: 'utf-8' },
         { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
