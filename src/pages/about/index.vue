@@ -15,9 +15,11 @@
         text="このサイトについて"
         :class="$style.element"
       )
-      P(
-        :class="[$style.element, $style.text]"
-      ) 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+      P(:class="[$style.element, $style.text]")
+        | 当サイト“命名の助（メイメイノスケ）”
+        | は子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
+        br
+        | ※当サイトは入力内容を保存しません。
 
       ul(:class="$style.linkList")
         li(:class="$style.li")
