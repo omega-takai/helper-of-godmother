@@ -15,10 +15,14 @@ const routerBase = process.env.BASE_DIR
 
 export default {
   head() {
+    const siteName = '命名の助（メイメイノスケ）'
+    const siteDescription =
+      '子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。50音を組み合わせて名前をつくりましょう。'
+    const siteUrl = 'https://t--takai.github.io/helper-of-godmother/'
+    const siteImage = `${process.env.BASE_DIR || '/'}sns-card.png`
     return {
       titleTemplate(titleChunk) {
-        const siteTitle = '命名の助（メイメイノスケ）'
-        return titleChunk ? `${titleChunk} - ${siteTitle}` : siteTitle
+        return titleChunk ? `${titleChunk} - ${siteName}` : siteName
       },
       meta: [
         { charset: 'utf-8' },
@@ -27,8 +31,29 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: process.env.npm_package_description || '',
+          content: siteDescription,
         },
+        { hid: 'title', name: 'title', content: siteName },
+        // Open Graph / Facebook
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: siteUrl },
+        { hid: 'ogTitle', property: 'og:title', content: siteName },
+        {
+          hid: 'ogDescription',
+          property: 'og:description',
+          content: siteDescription,
+        },
+        { property: 'og:image', content: siteImage },
+        // Twitter
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitterUrl', property: 'twitter:url', content: siteUrl },
+        { hid: 'twitterTitle', property: 'twitter:title', content: siteName },
+        {
+          hid: 'twitterDescription',
+          property: 'twitter:description',
+          content: siteDescription,
+        },
+        { property: 'twitter:image', content: siteImage },
       ],
       link: [
         {
