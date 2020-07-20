@@ -126,7 +126,7 @@ export default {
         sassOptions: {
           fiber: Fiber,
         },
-        prependData: "@use '@/assets/style/_not-actual-styles' as base;",
+        additionalData: "@use '@/assets/style/_not-actual-styles' as base;",
       },
     },
   },
