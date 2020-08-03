@@ -1,6 +1,6 @@
 import { mapGetters } from 'vuex'
-import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 import BindNameList from '@/components/Organism/BindNameList/index.vue'
+import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 
 export default {
   name: 'PageIndex',
