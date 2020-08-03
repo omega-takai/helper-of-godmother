@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import NuxtLinkTextWithIcon from './index.vue'
 import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
+import NuxtLinkTextWithIcon from './index.vue'
 
 const colors = ['green', 'grey']
 const icons = ['TwitterIcon', 'FacebookIcon', 'GithubIcon', 'InstagramIcon']

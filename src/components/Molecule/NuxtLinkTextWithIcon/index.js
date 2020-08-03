@@ -1,5 +1,5 @@
-import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
 import BaseNuxtLink from '@/components/Atom/BaseNuxtLink/index.vue'
+import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
 
 export default {
   name: 'NuxtLinkTextWithIcon',
