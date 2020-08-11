@@ -20,8 +20,9 @@
 
   .linkList {
     display: grid;
-    gap: base.pix-to-rem(8);
     grid-template-columns: 1fr;
+    gap: base.pix-to-rem(8);
+    font-size: base.type-scale('body');
     margin: {
       top: base.pix-to-rem(16);
     }
@@ -29,8 +30,6 @@
       right: base.pix-to-rem(24);
       left: base.pix-to-rem(24);
     }
-
-    font-size: base.type-scale('body');
     .li {
       display: block;
     }
