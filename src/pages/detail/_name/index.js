@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     fetchData() {
-      this.theName = this.$route.query.name
+      this.theName = this.$route.params.name
     },
     listFiler(arr) {
       return arr.filter((val, i, arr) => arr.indexOf(val) === i)

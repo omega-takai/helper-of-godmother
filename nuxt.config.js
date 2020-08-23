@@ -1,5 +1,14 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
+import {
+  alphabetRaw,
+  permuteWithRepetitions,
+} from './src/assets/script/store/settings.js'
+
+const detailPages = permuteWithRepetitions(alphabetRaw, 3).map(
+  (paramName) => `/detail/${paramName}`
+)
+const routesList = [...['/', '/about', '/list'], ...detailPages]
 
 const routerBase = process.env.BASE_DIR
   ? {
@@ -9,6 +18,7 @@ const routerBase = process.env.BASE_DIR
       generate: {
         fallback: true,
         dir: 'public',
+        routes: routesList,
       },
     }
   : {}

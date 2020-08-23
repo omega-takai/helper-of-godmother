@@ -10,7 +10,7 @@
       )
         NuxtLink(
           :class="$style.button"
-          :to="`/detail?name=${val}`"
+          :to="`/detail/${val}`"
           v-text="val"
         )
 </template>
