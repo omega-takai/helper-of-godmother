@@ -3,7 +3,7 @@ import LinkButtonWithIcon from '@/components/Molecule/LinkButtonWithIcon/index.v
 import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 
 export default {
-  name: 'about',
+  name: 'detail',
   components: {
     BaseTypography,
     NuxtLinkTextWithIcon,
