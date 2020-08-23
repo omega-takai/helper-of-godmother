@@ -41,7 +41,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.12.1",
     "core-js": "3.6.5",
-    "destyle.css": "1.0.14",
+    "destyle.css": "1.0.15",
     "nuxt": "2.14.3",
     "vue-feather-icons": "5.1.0",
     "vue-styled-components": "1.5.1"
@@ -57,7 +57,7 @@
     "@storybook/addon-links": "6.0.10",
     "@storybook/addons": "6.0.10",
     "@storybook/vue": "6.0.10",
-    "@vue/compiler-sfc": "3.0.0-rc.5",
+    "@vue/compiler-sfc": "3.0.0-rc.7",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
     "babel-preset-vue": "2.0.2",
