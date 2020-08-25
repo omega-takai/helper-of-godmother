@@ -15,11 +15,22 @@ export default {
       kanjiLink: 'https://b-name.jp/赤ちゃん名前辞典/?mode=1&sex=all&t=s&q=',
       nameList: [],
       alphabetList: [],
+      siteName: '命名の助（メイメイノスケ）',
+      pageTitle: '',
     }
   },
   head() {
     return {
       title: this.theName,
+      meta: [
+        {
+          hid: 'twitterTitle',
+          property: 'twitter:title',
+          content: this.pageTitle,
+        },
+        { hid: 'ogTitle', property: 'og:title', content: this.pageTitle },
+        { hid: 'title', name: 'title', content: this.pageTitle },
+      ],
     }
   },
   created() {
@@ -27,7 +38,9 @@ export default {
   },
   methods: {
     fetchData() {
-      this.theName = this.$route.params.name
+      const paramName = this.$route.params.name
+      this.theName = paramName
+      this.pageTitle = `${paramName} - ${this.siteName}`
     },
     listFiler(arr) {
       return arr.filter((val, i, arr) => arr.indexOf(val) === i)
