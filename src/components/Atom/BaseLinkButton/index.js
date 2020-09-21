@@ -18,8 +18,9 @@ export default {
   computed: {
     className() {
       const rawName = this.colorType
-      const lowcase = rawName.toLowerCase()
-      const upperCamelCase = lowcase.charAt(0).toUpperCase() + lowcase.slice(1)
+      const lowercase = rawName.toLowerCase()
+      const upperCamelCase =
+        lowercase.charAt(0).toUpperCase() + lowercase.slice(1)
       return `button${upperCamelCase}`
     },
   },

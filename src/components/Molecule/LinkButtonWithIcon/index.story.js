@@ -6,6 +6,7 @@ import LinkButtonWithIcon from './index.vue'
 
 const colors = ['green', 'grey']
 const icons = ['TwitterIcon', 'FacebookIcon', 'GithubIcon', 'InstagramIcon']
+const iconPosition = ['left', 'right']
 
 const stories = storiesOf('Design System|Molecule/LinkButtonWithIcon', module)
 
@@ -27,6 +28,10 @@ stories.add('normal', () => ({
       type: String,
       default: radios('iconName', icons, icons[0]),
     },
+    iconPosition: {
+      type: String,
+      default: radios('iconPosition', iconPosition, iconPosition[1]),
+    },
   },
   template: `
     <FlexLayout>
@@ -36,6 +41,7 @@ stories.add('normal', () => ({
       >
         <LinkButtonWithIcon
           url="https://ja.nuxtjs.org/"
+          :iconPosition="iconPosition"
           :iconName="iconName"
           :text="upperCamelCase(color)"
           :colorType="color"
@@ -46,8 +52,8 @@ stories.add('normal', () => ({
   methods: {
     action: action('clicked'),
     upperCamelCase(colorType) {
-      const lowcase = colorType.toLowerCase()
-      return lowcase.charAt(0).toUpperCase() + lowcase.slice(1)
+      const lowercase = colorType.toLowerCase()
+      return lowercase.charAt(0).toUpperCase() + lowercase.slice(1)
     },
   },
 }))

@@ -16,6 +16,10 @@ export default {
       type: String,
       default: '1.5x',
     },
+    iconPosition: {
+      type: String,
+      default: 'right',
+    },
     colorType: {
       type: String,
       default: 'green',
