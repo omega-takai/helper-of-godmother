@@ -32,4 +32,24 @@
             :url="`${kanjiLink}${val}`"
             :class="$style.button"
           )
+    section(
+      :class="$style.section"
+      key="list"
+    )
+      BaseTypography(
+        :level="3"
+        :text="`\"${theName}\"を共有する`"
+        :class="$style.sectionTitle"
+      )
+      div(:class="$style.shareUrl")
+        div(
+          :class="$style.urlBox"
+          v-text="theUrl"
+        )
+        LinkButtonWithIcon(
+          iconName="LinkIcon"
+          iconPosition="left"
+          text="URLをコピー"
+          :class="$style.button"
+        )
 </template>

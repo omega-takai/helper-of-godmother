@@ -1,3 +1,10 @@
+@mixin element-padding {
+  padding: {
+    right: base.pix-to-rem(24);
+    left: base.pix-to-rem(24);
+  }
+}
+
 .wrapper {
   flex: 1 1 100%;
   width: 100%;
@@ -8,10 +15,7 @@
     }
     .sectionTitle {
       margin-bottom: base.pix-to-rem(16);
-      padding: {
-        right: base.pix-to-rem(24);
-        left: base.pix-to-rem(24);
-      }
+      @include element-padding;
     }
   }
 
@@ -34,15 +38,30 @@
     grid-template-columns: repeat(2, 1fr);
     gap: base.pix-to-rem(8);
     font-size: base.type-scale('body');
-    padding: {
-      right: base.pix-to-rem(24);
-      left: base.pix-to-rem(24);
-    }
+    @include element-padding;
     .li {
       display: block;
     }
     .button {
       display: flex;
+    }
+  }
+
+  .shareUrl {
+    @include element-padding;
+
+    margin-top: base.pix-to-rem(16);
+    font-size: base.type-scale('body');
+
+    .urlBox {
+      padding: base.pix-to-rem(8) base.pix-to-rem(16);
+      background-color: base.colors('gray');
+      border-radius: base.pix-to-rem(4);
+    }
+    .button {
+      display: flex;
+      width: base.pix-to-rem(200);
+      margin: base.pix-to-rem(8) auto 0;
     }
   }
 }

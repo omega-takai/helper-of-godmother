@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       theName: '',
+      theUrl: '',
       kanjiLink: 'https://b-name.jp/赤ちゃん名前辞典/?mode=1&sex=all&t=s&q=',
       nameList: [],
       alphabetList: [],
@@ -41,6 +42,9 @@ export default {
       const paramName = this.$route.params.name
       this.theName = paramName
       this.pageTitle = `${paramName} - ${this.siteName}`
+      if (process.client) {
+        this.theUrl = decodeURI(location.href)
+      }
     },
     listFiler(arr) {
       return arr.filter((val, i, arr) => arr.indexOf(val) === i)
