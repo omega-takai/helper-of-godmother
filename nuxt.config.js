@@ -69,8 +69,13 @@ export default {
       link: [
         {
           rel: 'icon',
-          type: 'image/x-icon',
-          href: `${process.env.BASE_DIR || '/'}favicon.ico`,
+          type: 'image/svg+xml',
+          href: `${process.env.BASE_DIR || '/'}favicon.svg`,
+        },
+        {
+          rel: 'icon alternate',
+          type: 'image/png',
+          href: `${process.env.BASE_DIR || '/'}favicon.png`,
         },
         {
           rel: 'stylesheet',
