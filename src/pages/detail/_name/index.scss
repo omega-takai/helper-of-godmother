@@ -63,5 +63,18 @@
       width: base.pix-to-rem(200);
       margin: base.pix-to-rem(8) auto 0;
     }
+    .fail,
+    .success {
+      padding: base.pix-to-rem(8) base.pix-to-rem(16);
+      margin-top: base.pix-to-rem(8);
+      text-align: center;
+      border-radius: base.pix-to-rem(4);
+    }
+    .fail {
+      background-color: base.colors('alert');
+    }
+    .success {
+      background-color: base.colors('success');
+    }
   }
 }

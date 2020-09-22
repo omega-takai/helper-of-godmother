@@ -1,5 +1,6 @@
 import NuxtLinkTextWithIcon from '@/components/Molecule/NuxtLinkTextWithIcon/index.vue'
 import LinkButtonWithIcon from '@/components/Molecule/LinkButtonWithIcon/index.vue'
+import ButtonWithIcon from '~/components/Molecule/ButtonWithIcon/index.vue'
 import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 
 export default {
@@ -8,6 +9,7 @@ export default {
     BaseTypography,
     NuxtLinkTextWithIcon,
     LinkButtonWithIcon,
+    ButtonWithIcon,
   },
   data() {
     return {
@@ -18,6 +20,8 @@ export default {
       alphabetList: [],
       siteName: '命名の助（メイメイノスケ）',
       pageTitle: '',
+      isVisibleSuccess: false,
+      isVisibleFailure: false,
     }
   },
   head() {
@@ -48,6 +52,23 @@ export default {
     },
     listFiler(arr) {
       return arr.filter((val, i, arr) => arr.indexOf(val) === i)
+    },
+    noticeSuccess() {
+      this.isVisibleSuccess = true
+      setTimeout(() => (this.isVisibleSuccess = false), 2000)
+    },
+    noticeFailure() {
+      this.isVisibleFailure = true
+      setTimeout(() => (this.isVisibleFailure = false), 2000)
+    },
+    copyToClipboard() {
+      navigator.clipboard
+        .writeText(this.theUrl)
+        .then(this.noticeSuccess())
+        .catch((e) => {
+          console.error('failed', e)
+          this.noticeFailure()
+        })
     },
   },
   watch: {
