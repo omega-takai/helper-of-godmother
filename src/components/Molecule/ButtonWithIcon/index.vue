@@ -1,8 +1,7 @@
 <script src="./index.js"></script>
 <style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
-  BaseLinkButton(
-    :url="url"
+  BaseButton(
     :colorType="colorType"
     :text="text"
     :class="[$style.wrapper, { [$style.isRight]: iconPosition === 'right'}]"

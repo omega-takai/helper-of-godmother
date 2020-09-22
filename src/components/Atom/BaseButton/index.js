@@ -1,5 +1,5 @@
 export default {
-  name: 'BaseLinkButton',
+  name: 'BaseButton',
   props: {
     colorType: {
       type: String,
@@ -9,10 +9,6 @@ export default {
       type: String,
       require: true,
       default: 'Text',
-    },
-    url: {
-      type: String,
-      default: '###',
     },
   },
   computed: {

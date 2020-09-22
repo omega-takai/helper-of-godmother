@@ -23,6 +23,7 @@ import {
   InfoIcon,
   RefreshCwIcon,
   SettingsIcon,
+  LinkIcon,
 } from 'vue-feather-icons'
 
 export default {
@@ -49,6 +50,7 @@ export default {
     InfoIcon,
     RefreshCwIcon,
     SettingsIcon,
+    LinkIcon,
   },
   props: {
     iconSize: {
@@ -75,6 +77,7 @@ export default {
           'GithubIcon',
           'InstagramIcon',
           'TwitterIcon',
+          'LinkIcon',
         ].includes(value)
       },
     },

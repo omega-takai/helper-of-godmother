@@ -1,5 +1,6 @@
 import NuxtLinkTextWithIcon from '@/components/Molecule/NuxtLinkTextWithIcon/index.vue'
 import LinkButtonWithIcon from '@/components/Molecule/LinkButtonWithIcon/index.vue'
+import ButtonWithIcon from '~/components/Molecule/ButtonWithIcon/index.vue'
 import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 
 export default {
@@ -8,15 +9,19 @@ export default {
     BaseTypography,
     NuxtLinkTextWithIcon,
     LinkButtonWithIcon,
+    ButtonWithIcon,
   },
   data() {
     return {
       theName: '',
+      theUrl: '',
       kanjiLink: 'https://b-name.jp/赤ちゃん名前辞典/?mode=1&sex=all&t=s&q=',
       nameList: [],
       alphabetList: [],
       siteName: '命名の助（メイメイノスケ）',
       pageTitle: '',
+      isVisibleSuccess: false,
+      isVisibleFailure: false,
     }
   },
   head() {
@@ -41,9 +46,29 @@ export default {
       const paramName = this.$route.params.name
       this.theName = paramName
       this.pageTitle = `${paramName} - ${this.siteName}`
+      if (process.client) {
+        this.theUrl = decodeURI(location.href)
+      }
     },
     listFiler(arr) {
       return arr.filter((val, i, arr) => arr.indexOf(val) === i)
+    },
+    noticeSuccess() {
+      this.isVisibleSuccess = true
+      setTimeout(() => (this.isVisibleSuccess = false), 2000)
+    },
+    noticeFailure() {
+      this.isVisibleFailure = true
+      setTimeout(() => (this.isVisibleFailure = false), 2000)
+    },
+    copyToClipboard() {
+      navigator.clipboard
+        .writeText(this.theUrl)
+        .then(this.noticeSuccess())
+        .catch((e) => {
+          console.error('failed', e)
+          this.noticeFailure()
+        })
     },
   },
   watch: {

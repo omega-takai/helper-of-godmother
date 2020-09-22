@@ -32,4 +32,38 @@
             :url="`${kanjiLink}${val}`"
             :class="$style.button"
           )
+    section(
+      :class="$style.section"
+      key="share"
+    )
+      BaseTypography(
+        :level="3"
+        :text="`\"${theName}\"を共有する`"
+        :class="$style.sectionTitle"
+      )
+      div(:class="$style.shareUrl")
+        div(
+          :class="$style.urlBox"
+          v-text="theUrl"
+        )
+        transition-group(tag="div")
+          p(
+            key="success"
+            v-if="isVisibleSuccess"
+            v-text="'👍👍コピーできました👍👍'"
+            :class="$style.success"
+          )
+          p(
+            key="fail"
+            v-if="isVisibleFailure"
+            v-text="'😥失敗です😥'"
+            :class="$style.fail"
+          )
+        ButtonWithIcon(
+          iconName="LinkIcon"
+          iconPosition="left"
+          text="URLをコピー"
+          :class="$style.button"
+          @click.native.prevent="copyToClipboard()"
+        )
 </template>

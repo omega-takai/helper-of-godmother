@@ -27,6 +27,7 @@ const icons = [
   'InfoIcon',
   'RefreshCwIcon',
   'SettingsIcon',
+  'LinkIcon',
 ]
 
 storiesOf('Design System|Atom/BaseFeatherIcon', module)

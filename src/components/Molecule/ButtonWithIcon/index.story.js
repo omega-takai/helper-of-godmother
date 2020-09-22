@@ -2,19 +2,19 @@ import { storiesOf } from '@storybook/vue'
 import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
-import LinkButtonWithIcon from './index.vue'
+import ButtonWithIcon from './index.vue'
 
 const colors = ['green', 'grey']
 const icons = ['TwitterIcon', 'FacebookIcon', 'GithubIcon', 'InstagramIcon']
 const iconPosition = ['left', 'right']
 
-const stories = storiesOf('Design System|Molecule/LinkButtonWithIcon', module)
+const stories = storiesOf('Design System|Molecule/ButtonWithIcon', module)
 
 stories.addDecorator(withKnobs)
 
 stories.add('normal', () => ({
   components: {
-    LinkButtonWithIcon,
+    ButtonWithIcon,
     FlexLayout,
     FlexItem,
   },
@@ -39,8 +39,7 @@ stories.add('normal', () => ({
         v-for="(color, i) in colors"
         :key="i"
       >
-        <LinkButtonWithIcon
-          url="https://ja.nuxtjs.org/"
+        <ButtonWithIcon
           :iconPosition="iconPosition"
           :iconName="iconName"
           :text="upperCamelCase(color)"

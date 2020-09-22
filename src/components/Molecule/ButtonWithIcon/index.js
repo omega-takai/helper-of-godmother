@@ -1,11 +1,11 @@
 import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
-import BaseLinkButton from '~/components/Atom/BaseLinkButton/index.vue'
+import BaseButton from '~/components/Atom/BaseButton/index.vue'
 
 export default {
-  name: 'LinkButtonWithIcon',
+  name: 'ButtonWithIcon',
   components: {
     BaseFeatherIcon,
-    BaseLinkButton,
+    BaseButton,
   },
   props: {
     iconName: {
@@ -28,11 +28,6 @@ export default {
       type: String,
       require: true,
       default: 'Text',
-    },
-    url: {
-      type: String,
-      require: true,
-      default: 'https://ja.nuxtjs.org/',
     },
   },
 }

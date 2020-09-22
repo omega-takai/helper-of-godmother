@@ -22,5 +22,6 @@
 .text {
   margin-top: base.pix-to-rem(16);
   font-size: base.type-scale('body');
+  line-height: base.fonts('lineHeight');
   text-align: left;
 }
