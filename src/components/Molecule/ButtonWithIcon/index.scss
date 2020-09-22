@@ -1,0 +1,13 @@
+.wrapper {
+  position: relative;
+  &.isRight {
+    padding-right: base.pix-to-rem(8 + 24 + 4);
+  }
+}
+.iconRight {
+  position: absolute;
+  right: base.pix-to-rem(8);
+}
+.iconLeft {
+  margin-right: base.pix-to-rem(8);
+}
