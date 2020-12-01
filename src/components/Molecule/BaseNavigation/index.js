@@ -7,19 +7,19 @@ export default {
   },
   methods: {
     onClickHome() {
-      this.$emit('onClickHome')
+      this.$emit('on-click-home')
     },
     onClickList() {
-      this.$emit('onClickList')
+      this.$emit('on-click-list')
     },
     onClickEdit() {
-      this.$emit('onClickEdit')
+      this.$emit('on-click-edit')
     },
     onClickReset() {
-      this.$emit('onClickReset')
+      this.$emit('on-click-reset')
     },
     onClickSettings() {
-      this.$emit('onClickSettings')
+      this.$emit('on-click-settings')
     },
   },
 }

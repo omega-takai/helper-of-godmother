@@ -9,11 +9,11 @@
       BaseNavigation(
         v-if="!isVisibleModal"
         :class="$style.navigation"
-        @onClickHome="goToHome()"
-        @onClickList="goToList()"
-        @onClickEdit="generateNames()"
-        @onClickReset="restoreAll()"
-        @onClickSettings="showSettings()"
+        @on-click-home="goToHome()"
+        @on-click-list="goToList()"
+        @on-click-edit="generateNames()"
+        @on-click-reset="restoreAll()"
+        @on-click-settings="showSettings()"
       )
 
     TheBindFooter(:class="$style.footer")

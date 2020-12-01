@@ -1,7 +1,7 @@
 <script src="./index.js"></script>
 <template lang="pug">
   BaseModal(
-    @onClickClose="closeModal()"
+    @on-click-close="closeModal()"
     title="名前をつくる設定"
   )
     template(#default)
