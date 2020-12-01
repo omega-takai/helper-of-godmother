@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   BaseButton(
     :colorType="colorType"
@@ -21,3 +20,4 @@
         :class="$style.iconRight"
       )
 </template>
+<style lang="scss" src="./index.scss" module></style>

@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div(:class="$style.wrapper")
     ul(:class="$style.note")
@@ -15,3 +14,4 @@
       @click="generateNameList"
     ) 名前をつくる
 </template>
+<style lang="scss" src="./index.scss" module></style>

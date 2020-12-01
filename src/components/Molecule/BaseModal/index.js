@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     closeModal() {
-      this.$emit('onClickClose')
+      this.$emit('on-click-close')
     },
   },
 }

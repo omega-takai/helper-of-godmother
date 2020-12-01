@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div(:class="$style.wrapper")
     ul(:class="className")
@@ -14,3 +13,4 @@
           v-text="val"
         )
 </template>
+<style lang="scss" src="./index.scss" module></style>

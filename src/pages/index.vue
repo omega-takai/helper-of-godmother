@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" module src="./index.scss"></style>
 <template lang="pug">
   transition-group(
     appear
@@ -36,3 +35,4 @@
         :class="$style.element"
       )
 </template>
+<style lang="scss" module src="./index.scss"></style>
