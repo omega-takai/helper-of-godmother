@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   nav(:class="$style.wrapper")
     ul(:class="$style.list")
@@ -49,3 +48,4 @@
         )
         div(:class="$style.text") 設定
 </template>
+<style lang="scss" src="./index.scss" module></style>
