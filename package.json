@@ -1,9 +1,9 @@
 {
   "name": "helper-of-godmother",
   "version": "1.1.0",
+  "private": true,
   "description": "子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。",
   "author": "Tomonari Takai",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -14,24 +14,24 @@
     "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
     "lint:script": "eslint --ext .js,.vue .",
     "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
-    "clean": "rimraf .nuxt dist .out public coverage",
+    "clean": "sort-package-json && rimraf .nuxt dist .out public coverage",
     "style-migration": "sass-migrator --load-path node_modules module --verbose --migrate-deps",
     "storybook": "start-storybook -c .storybook -p 6006",
     "storybook:debug": "yarn storybook --debug-webpack",
     "build-storybook": "build-storybook -c .storybook -o .out"
   },
-  "lint-staged": {
-    "*.{js,vue}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-merge": "yarn clean && yarn install",
       "post-checkout": "yarn clean",
-      "post-rebase": "yarn clean && yarn install",
-      "pre-auto-gc": "yarn clean"
+      "post-merge": "yarn clean && yarn install",
+      "pre-auto-gc": "yarn clean",
+      "post-rebase": "yarn clean && yarn install"
     }
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix"
   },
   "browserslist": [
     "defaults",
@@ -76,6 +76,7 @@
     "sass": "1.29.0",
     "sass-loader": "10.1.1",
     "sass-migrator": "1.2.6",
+    "sort-package-json": "^1.50.0",
     "stylelint": "13.8.0",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-recess-order": "2.3.0",
