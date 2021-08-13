@@ -21,7 +21,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
       - run: echo ${{ steps.yarn-cache.outputs.dir }}
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
@@ -30,7 +30,7 @@ jobs:
 
       - run: yarn install
       - run: yarn build-storybook
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: Storybook
           path: .out
@@ -52,7 +52,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
       - run: echo ${{ steps.yarn-cache.outputs.dir }}
       - name: Cache dependencies
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}

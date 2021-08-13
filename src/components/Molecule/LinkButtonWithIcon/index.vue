@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   BaseLinkButton(
     :url="url"
@@ -22,3 +21,4 @@
         :class="$style.iconRight"
       )
 </template>
+<style lang="scss" src="./index.scss" module></style>

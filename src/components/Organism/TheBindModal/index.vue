@@ -1,8 +1,7 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   BaseModal(
-    @onClickClose="closeModal()"
+    @on-click-close="closeModal()"
     title="名前をつくる設定"
   )
     template(#default)
@@ -22,3 +21,4 @@
         ) 名前の候補をつくる
         BindGenerateButton
 </template>
+<style lang="scss" src="./index.scss" module></style>

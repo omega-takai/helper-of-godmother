@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -10,11 +9,11 @@
       BaseNavigation(
         v-if="!isVisibleModal"
         :class="$style.navigation"
-        @onClickHome="goToHome()"
-        @onClickList="goToList()"
-        @onClickEdit="generateNames()"
-        @onClickReset="restoreAll()"
-        @onClickSettings="showSettings()"
+        @on-click-home="goToHome()"
+        @on-click-list="goToList()"
+        @on-click-edit="generateNames()"
+        @on-click-reset="restoreAll()"
+        @on-click-settings="showSettings()"
       )
 
     TheBindFooter(:class="$style.footer")
@@ -24,3 +23,4 @@
         :class="$style.modal"
       )
 </template>
+<style lang="scss" src="./index.scss" module></style>

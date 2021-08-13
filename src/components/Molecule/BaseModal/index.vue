@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div(
     :class="$style.baseLayer"
@@ -29,3 +28,4 @@
         div(:class="$style.body")
           slot
 </template>
+<style lang="scss" src="./index.scss" module></style>
