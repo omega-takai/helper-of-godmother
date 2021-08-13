@@ -38,6 +38,9 @@
     "not < 1%",
     "IE 11"
   ],
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "@nuxtjs/axios": "5.13.6",
     "core-js": "3.16.0",
