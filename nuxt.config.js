@@ -24,6 +24,9 @@ const routerBase = process.env.BASE_DIR
   : {}
 
 export default {
+  // Target: https://go.nuxtjs.dev/config-target
+  target: 'static',
+
   head() {
     const siteName = '命名の助（メイメイノスケ）'
     const siteDescription =
@@ -122,19 +125,6 @@ export default {
    */
   srcDir: 'src/',
   build: {
-    babel: {
-      presets({ isServer }) {
-        return [
-          [
-            require.resolve('@nuxt/babel-preset-app'),
-            {
-              buildTarget: isServer ? 'server' : 'client',
-              corejs: { version: 3 },
-            },
-          ],
-        ]
-      },
-    },
     loaders: {
       scss: {
         implementation: Sass,
