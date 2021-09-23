@@ -1,7 +1,7 @@
 # 命名の助（メイメイノスケ）
 
 ![DEPLOYMENT](https://github.com/t--takai/helper-of-godmother/workflows/DEPLOYMENT/badge.svg)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/helper-of-godmother/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/helper-of-godmother/blob/main/LICENSE)
 
 > 子供の名前を響きから考える人向けの、ブラウザで動作するサポートツールです。
 
