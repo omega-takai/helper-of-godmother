@@ -47,7 +47,7 @@
     "vue-styled-components": "1.6.0"
   },
   "devDependencies": {
-    "@babel/runtime-corejs3": "7.17.2",
+    "@babel/runtime-corejs3": "7.17.9",
     "@nuxtjs/eslint-config": "5.0.0",
     "@nuxtjs/eslint-module": "3.0.2",
     "@nuxtjs/google-analytics": "2.4.0",
@@ -59,7 +59,7 @@
     "@storybook/vue": "6.1.21",
     "@vue/compiler-sfc": "3.2.31",
     "babel-eslint": "10.1.0",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.5",
     "babel-preset-vue": "2.0.2",
     "cross-env": "7.0.3",
     "eslint": "7.32.0",
