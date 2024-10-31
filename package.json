@@ -42,7 +42,7 @@
     "@nuxtjs/axios": "5.13.6",
     "core-js": "3.21.1",
     "destyle.css": "2.0.2",
-    "nuxt": "2.14.12",
+    "nuxt": "3.12.4",
     "vue-feather-icons": "5.1.0",
     "vue-styled-components": "1.6.0"
   },
